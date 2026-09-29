@@ -14,9 +14,8 @@ body[data-accent="red"]{--accent:#eb0a1e;--accent-dim:#ff6b76}
 .workspace{margin-left:248px;min-width:0}.btn{border:1px solid #ccd4de;background:transparent;border-radius:7px;padding:9px 14px;font-size:12px;font-weight:550;line-height:1.4;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;color:var(--ink)}.btn:hover{background:#e7e3da}.btn.primary{background:var(--accent);color:white;border-color:var(--accent)}.btn.primary:hover{filter:brightness(.85)}.btn.dark{background:#0b1020;border-color:#2a3350;color:white}.btn.light{color:#dbe4f3;border-color:#ffffff30}.btn.light:hover{background:#ffffff15}.menu-toggle{display:none}
 .page{max-width:1240px;margin:auto;padding:40px 44px 20px}.panel[hidden]{display:none}.panel{position:relative;animation:enter .24s ease-out}@keyframes enter{from{opacity:.4;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 .eyebrow{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:14px}.sub{font-size:19px;color:var(--ink);font-weight:550;letter-spacing:-.3px;margin-top:14px}
-.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:white;border:1px solid var(--line);border-radius:13px;margin:26px 0 34px;box-shadow:var(--shadow)}.metric{padding:22px 20px;border-right:1px solid var(--line);min-width:0}.metric:last-child{border-right:0}.metric .value{font-family:Georgia,serif;font-size:30px;letter-spacing:-1.2px;font-weight:500;line-height:1.15}.metric .label{font-size:11.5px;line-height:1.5;margin-top:7px;color:var(--muted)}
 .grid{display:grid;gap:16px;margin-top:20px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);min-width:0;transition:transform .15s ease,box-shadow .15s ease}.card p,.card li{font-size:13px;color:var(--muted);line-height:1.7}.card h3+p,.card h4+p{margin-top:10px}.card .kicker{font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);font-weight:650}.numcard{position:relative;padding:22px 26px 26px;overflow:hidden}.numcard:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-dim) 60%,transparent)}.numcard .n{display:flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:1.6px;color:var(--accent)}.numcard .n:after{content:"";width:18px;height:1px;background:var(--accent);opacity:.6}.numcard h3{margin:18px 0 0;font-family:Georgia,serif;font-weight:500;font-size:clamp(20px,1.9vw,24px);letter-spacing:-.5px;line-height:1.2}.numcard p{font-size:14px;line-height:1.7;margin-top:12px}
+.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);min-width:0;transition:transform .15s ease,box-shadow .15s ease}.card p,.card li{font-size:13px;color:var(--muted);line-height:1.7}.card h3+p,.card h4+p{margin-top:10px}
 .h2-one{max-width:none}.h2-one.tagline{white-space:normal;text-wrap:balance;margin-top:44px}.h2-one.ch-title{white-space:normal;text-wrap:balance}.ch-sub{font-size:16px;font-weight:500;letter-spacing:.1px;line-height:1.45;color:rgba(11,16,32,.65);margin-top:10px}@media(max-width:720px){.ch-sub{font-size:15px}}.t-red-h{color:var(--red)}.t-blue-h{color:var(--accent)}.t-green-h{color:#1f9d55}.tag-flow{margin-top:12px;font-size:17px;font-weight:500;color:rgba(11,16,32,.75);letter-spacing:.1px}.tf-step{white-space:nowrap}.tf-sub{color:var(--muted);font-size:.9em;font-weight:400}.tf-arr{color:var(--accent);opacity:.7;margin:0 6px}@media(max-width:720px){.tag-flow{font-size:15px}}.marquee{margin-top:28px;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 40px),transparent)}.mq-track{display:flex;width:max-content;animation:mq 75s linear infinite}.mq-set{display:flex;align-items:center;gap:116px;padding-right:116px}.mq-set img{display:block}@keyframes mq{from{transform:translateX(-50%)}to{transform:translateX(0)}}@media(min-width:1100px){.h2-one{white-space:nowrap;font-size:clamp(28px,calc((100vw - 340px) / 24),46px)}}
 .cust-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:36px}@media(max-width:1180px){.cust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.cust-grid{grid-template-columns:1fr}}
 .cust{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;height:384px;border-radius:16px}
@@ -37,34 +36,17 @@ body[data-accent="red"]{--accent:#eb0a1e;--accent-dim:#ff6b76}
 .cust-solved li{position:relative;font-size:12.5px;line-height:1.45;color:var(--ink);padding-left:12px;margin-top:7px}
 .cust-solved li::before{content:"";position:absolute;left:0;top:.52em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
 @media(prefers-reduced-motion:reduce){.cust-inner{transition:none}}
-.cog-quote{margin:18px 0 4px;padding:3px 0 3px 16px;border-left:3px solid var(--accent);font-family:Georgia,serif;font-size:clamp(18px,1.7vw,22px);letter-spacing:-.3px;line-height:1.35;color:var(--ink)}@media(min-width:1100px){.nowrap-d{white-space:nowrap}}
-.hero-h{font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Helvetica,Arial,sans-serif;font-weight:500;font-size:clamp(32px,3.9vw,54px);line-height:1.02;letter-spacing:-0.035em;max-width:none;color:var(--ink)}.hero-h .hl{color:var(--accent)}
-.section-label{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:36px 0 16px}.section-label h3{font-size:20px;font-family:Georgia,serif;font-weight:500;letter-spacing:-.4px}.section-label span{font-size:11px;color:var(--muted)}
-.quote{font-family:Georgia,serif;font-size:clamp(19px,2vw,25px);line-height:1.55;letter-spacing:-.4px}.quote-attr{margin-top:14px;font-size:12px;color:var(--muted)}.q-stage{position:relative}.q-slide{transition:opacity .4s ease}.q-slide.q-out{opacity:0}.q-kicker{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent);font-weight:650;margin-bottom:12px;padding-left:22px}.q-kicker[hidden]{display:none}.qrot{margin:18px 0}#qrot .quote{font-size:18px;line-height:1.45;letter-spacing:-.2px;padding-left:20px;border-left:2px solid var(--ink);text-wrap:pretty}#qrot .quote-attr{margin-top:10px;padding-left:22px;font-size:12.5px}@media(max-width:720px){#qrot .quote{font-size:17px}}.q-probe{position:absolute;top:0;left:0;width:100%;visibility:hidden;pointer-events:none}
 .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;background:var(--tile);padding:10px 14px;font-size:12px;color:var(--ink)}.chip-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
 .band{margin-top:24px;border:1px solid var(--line);border-radius:10px;background:#efeae0;padding:13px 18px;font-size:12px;color:#5b5344;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.band b{color:var(--ink)}
 
-.subtle{color:var(--muted);font-size:12px;line-height:1.7}.fine{font-size:11px;color:var(--muted);line-height:1.7}
+.fine{font-size:11px;color:var(--muted);line-height:1.7}
 
 .talk{border-left:2px solid var(--accent);padding:2px 0 2px 14px;margin-top:12px;max-width:820px}.talk .t-lbl{font-size:9px;letter-spacing:1.7px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:4px}.talk p{font-family:Georgia,serif;font-style:italic;font-size:15px;line-height:1.5;color:var(--ink);margin:0}
-.numcard[data-panel]{cursor:pointer}.numcard[data-panel]:hover{transform:translateY(-2px)}.numcard[data-panel]:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.numcard .afford{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent)}.numcard .afford .arr{display:inline-block;font-size:12px;transition:transform .22s}.numcard[data-panel][aria-expanded="true"] .afford .arr{transform:rotate(180deg)}
-.acc-panel{display:grid;grid-template-rows:0fr;grid-template-columns:minmax(0,1fr);visibility:hidden;transition:grid-template-rows .32s ease,visibility 0s linear .32s}.acc-panel.open{grid-template-rows:1fr;visibility:visible;transition:grid-template-rows .32s ease}.acc-in{min-height:0;min-width:0;overflow:hidden}
 .mp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,512px);gap:30px;margin-top:16px;align-items:start;min-width:0}
 .mp-copy{min-width:0}
 .mp-h{font-family:Georgia,serif;font-weight:500;font-size:clamp(21px,2.1vw,28px);letter-spacing:-.5px;line-height:1.2;margin-top:2px}.mp-text{font-size:13.5px;line-height:1.7;color:var(--muted);margin-top:13px}
 .mp-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;min-width:0}.mp-stat{border:1px solid var(--line);border-radius:10px;background:white;padding:12px 14px;min-width:0}.mp-stat b{display:block;font-family:Georgia,serif;font-size:18px;letter-spacing:-.5px;font-weight:500}.mp-stat span{font-size:10px;color:var(--muted);display:block;margin-top:4px;line-height:1.45}
 .mp-ide{position:relative;min-width:0}
-.cp{margin-top:16px;min-width:0}
-.cap-row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:28px;margin-top:2px;align-items:start;min-width:0}
-.cap-l{min-width:0}
-.cap-l .d1-h{margin-top:22px}
-.d1-h{font-size:17px;font-weight:650;letter-spacing:-.3px;margin:0 0 10px}.d1-h i{font-family:Georgia,serif;font-style:italic;font-weight:500}
-.d1 svg{width:100%;height:auto;display:block}
-.cap2{display:block;margin:0;min-width:0;padding-top:2px}
-.d2{min-width:0}.d2-h{font-size:17px;font-weight:650;letter-spacing:-.3px;margin:0 0 10px}
-.d2 svg{width:100%;height:auto;display:block}
-.cap2-cap{max-width:none;font-size:12.5px;margin-top:10px;color:var(--muted);line-height:1.7}
 h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 .team-g{margin-top:30px;min-width:0}
 .team-lab{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;color:var(--ink)}
@@ -85,21 +67,7 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 .pc-badge img{width:100%;height:100%;object-fit:contain;display:block}
 .pc-name{font-size:15px;font-weight:700;letter-spacing:-.2px;color:var(--ink)}
 .pc-title{font-size:12.5px;color:var(--muted);line-height:1.55;margin-top:6px}
-.s-lead{margin:14px 0 0;max-width:960px}
-.sl-carousel{max-width:none;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
-.sl-slides{display:grid}
-.sl-slide{grid-area:1/1;margin:0;transition:opacity .18s ease}
-.sl-slide[aria-hidden="true"]{visibility:hidden;opacity:0}
-.sl-next{width:40px;height:40px;flex:none;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;transition:border-color .15s}
-.sl-next:hover{border-color:var(--ink)}
-.sl-next:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.s-lead blockquote{margin:0;padding-left:20px;border-left:2px solid var(--ink);font-family:Georgia,serif;font-size:18px;line-height:1.45;letter-spacing:-.2px;color:var(--ink);text-wrap:pretty}
-.s-lead figcaption{margin-top:10px;padding-left:22px;font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:10px}
-.sl-av{width:32px;height:32px;border-radius:50%;flex:none;overflow:hidden;border:2px solid var(--accent);padding:2px;background:#ebe7de}
-.sl-av img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
 
-.s-lead figcaption b{font-size:13.5px;font-weight:700;color:var(--ink)}
-@media(max-width:720px){.s-lead blockquote{font-size:17px}}
 .fan{display:grid;grid-template-columns:minmax(220px,320px) 80px minmax(0,1fr);margin:26px 0 4px;align-items:stretch}
 .fan-root{align-self:center;background:var(--nav);color:#fff;border-radius:14px;padding:30px 24px;font-family:Georgia,serif;font-size:clamp(19px,1.9vw,25px);line-height:1.28;letter-spacing:-.4px;text-align:center;box-shadow:var(--shadow)}
 .fan-lines{display:block;width:80px;height:100%}
@@ -171,25 +139,13 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 .footnote{font-size:10px;color:#6d7684;display:flex;justify-content:space-between;gap:15px;padding:15px 44px 26px;border-top:1px solid var(--line);margin:0 0;max-width:1240px;line-height:1.7}
 
 @media(max-width:1100px){.mp{grid-template-columns:1fr}.composer{margin:0}}
-@media(max-width:1180px){.cap-row{grid-template-columns:1fr;max-width:760px;gap:24px}.cap-row .cap2{max-width:460px;padding-top:0}}
-@media(max-width:1200px){.sidebar{width:224px;padding:26px 16px}.workspace{margin-left:224px}.page{padding:30px}.metrics{grid-template-columns:repeat(3,1fr)}.metric:nth-child(3){border-right:0}.metric:nth-child(-n+3){border-bottom:1px solid var(--line)}}
-@media(max-width:980px){.metrics{grid-template-columns:repeat(2,1fr)}.metric{border-right:0;border-bottom:1px solid var(--line)}.metric:nth-child(2n){border-left:0}.metric:nth-child(odd){border-right:1px solid var(--line)}.metric:nth-last-child(-n+1){border-bottom:0}.grid.three,.grid.two{grid-template-columns:1fr}}
-@media(max-width:720px){.sidebar{transform:translateX(-100%);width:256px;transition:transform .2s}.sidebar.open{transform:translateX(0);box-shadow:0 0 0 100vmax #0b102066}.workspace{margin-left:0}.menu-toggle{display:flex;position:fixed;top:10px;left:10px;z-index:40;padding:7px 10px;font-size:14px;background:var(--paper);box-shadow:0 1px 6px #0b102022}.page{padding:56px 16px 22px}h2{font-size:29px;letter-spacing:-.8px}.sub{font-size:16px}.metrics{grid-template-columns:1fr 1fr}.metric{padding:16px}.metric .value{font-size:25px}.card{padding:20px}.ide-pop{width:min(290px,calc(100vw - 32px))}.cmp-dl{display:none}.cmp-left{flex-wrap:wrap;row-gap:6px}.footnote{display:block;font-size:9px;padding:15px 16px 22px}.footnote span{display:block;margin-bottom:5px}.bottom-nav small{display:none}}
+@media(max-width:1200px){.sidebar{width:224px;padding:26px 16px}.workspace{margin-left:224px}.page{padding:30px}}
+@media(max-width:980px){.grid.three,.grid.two{grid-template-columns:1fr}}
+@media(max-width:720px){.sidebar{transform:translateX(-100%);width:256px;transition:transform .2s}.sidebar.open{transform:translateX(0);box-shadow:0 0 0 100vmax #0b102066}.workspace{margin-left:0}.menu-toggle{display:flex;position:fixed;top:10px;left:10px;z-index:40;padding:7px 10px;font-size:14px;background:var(--paper);box-shadow:0 1px 6px #0b102022}.page{padding:56px 16px 22px}h2{font-size:29px;letter-spacing:-.8px}.sub{font-size:16px}.card{padding:20px}.ide-pop{width:min(290px,calc(100vw - 32px))}.cmp-dl{display:none}.cmp-left{flex-wrap:wrap;row-gap:6px}.footnote{display:block;font-size:9px;padding:15px 16px 22px}.footnote span{display:block;margin-bottom:5px}.bottom-nav small{display:none}}
 @media(max-width:480px){.mp-stats{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
-@media print{@page{size:A4;margin:14mm}body{background:white}.sidebar,.bottom-nav,.menu-toggle,dialog,.skip{display:none!important}.workspace{margin:0}.page{padding:0;max-width:none}.panel,.panel[hidden]{display:block!important;animation:none;break-before:page}.acc-panel{grid-template-rows:1fr;visibility:visible}.ide-pop{display:none!important}.panel:first-child{break-before:auto}h2{font-size:24px}.metrics{grid-template-columns:repeat(5,1fr)}.metric{padding:10px}.metric .value{font-size:18px}.card,.chip{box-shadow:none;break-inside:avoid}.footnote{display:block;font-size:8.5px}body[data-theme="dark"]{background:white}body[data-theme="dark"] h2,body[data-theme="dark"] .ch-sub{color:var(--ink)}body[data-theme="dark"] .eyebrow{color:var(--accent)}body[data-theme="dark"] .nf-front{background:#fff;border-color:var(--line);box-shadow:none}body[data-theme="dark"] .nf-front .sc-lab,body[data-theme="dark"] .ns-own{color:var(--muted)}body[data-theme="dark"] .ns-body{color:var(--ink)}body[data-theme="dark"] .nf-ic{background:rgba(11,16,32,.08);color:var(--muted)}}
+@media print{@page{size:A4;margin:14mm}body{background:white}.sidebar,.bottom-nav,.menu-toggle,dialog,.skip{display:none!important}.workspace{margin:0}.page{padding:0;max-width:none}.panel,.panel[hidden]{display:block!important;animation:none;break-before:page}.ide-pop{display:none!important}.panel:first-child{break-before:auto}h2{font-size:24px}.card,.chip{box-shadow:none;break-inside:avoid}.footnote{display:block;font-size:8.5px}body[data-theme="dark"]{background:white}body[data-theme="dark"] h2,body[data-theme="dark"] .ch-sub{color:var(--ink)}body[data-theme="dark"] .eyebrow{color:var(--accent)}body[data-theme="dark"] .nf-front{background:#fff;border-color:var(--line);box-shadow:none}body[data-theme="dark"] .nf-front .sc-lab,body[data-theme="dark"] .ns-own{color:var(--muted)}body[data-theme="dark"] .ns-body{color:var(--ink)}body[data-theme="dark"] .nf-ic{background:rgba(11,16,32,.08);color:var(--muted)}}
 /* chapter 05 "Next Steps" — dark stat-card family (styled like .s-cards, on navy) */
-.cog-row{display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:32px;margin:18px 0;align-items:stretch}
-.cog-row-l{min-width:0}
-.cog-prods{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:12px;height:100%}
-.cprod{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);display:flex;align-items:center;min-width:0;padding:14px 17px;font-family:Georgia,'Times New Roman',serif;font-size:17px;font-weight:600;letter-spacing:-.3px;line-height:1.3;color:var(--ink);text-wrap:balance}
-.cprod::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;border-radius:14px 14px 0 0;background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 30%,#fff))}
-.cog-chart{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px 8px}
-.cog-chart svg{display:block;width:100%;height:auto}
-.cog-legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:10.5px;color:var(--muted);margin-top:2px}
-.cog-legend i{width:8px;height:8px;border-radius:2px;display:inline-block;margin-right:5px}
-@media(max-width:980px){.cog-row{grid-template-columns:1fr}.cog-prods{height:auto}.cog-chart{max-width:520px}}
-@media(max-width:480px){.cprod{font-size:15px;padding:12px 13px;letter-spacing:-.2px}}
 .ns-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px;align-items:stretch}
 .nsc{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;min-width:0;border-radius:14px;position:relative}
 .nsc:focus-visible{outline:2px solid var(--accent-dim);outline-offset:3px}
@@ -213,7 +169,7 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 .ns-t+.ns-k{margin-top:18px}
 @media(max-width:980px){.ns-cards{grid-template-columns:1fr}}
 /* chapter 06 "Customers" — public logo wall (grey tiles like the reference image) */
-.wall{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin-top:28px}
+.wall{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-auto-rows:1fr;gap:4px;margin-top:28px;min-height:calc(100vh - 190px)}
 .wtile{display:flex;align-items:center;justify-content:center;background:#ececeb;border-radius:6px;margin:0;aspect-ratio:2/1;padding:12px}
 .wtile img{max-width:72%;max-height:34px;width:auto;height:auto;object-fit:contain;display:block}
 @media(max-width:980px){.wall{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -356,275 +312,6 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 </section>
 <section class="panel" id="cognition" role="tabpanel" aria-labelledby="tab-cognition">
 <div class="eyebrow">03 · Who is Cognition?</div>
-<h2 class="hero-h"><span class="hl">Real AI teammates,</span><br>built for enterprise software.</h2>
-<figure class="qrot sl-carousel" id="qrot" aria-roledescription="carousel" aria-label="Quotes">
-<div class="q-stage" id="qStage"><div class="q-slide" id="qSlide" aria-live="polite"><div class="q-kicker" id="qKick" hidden></div><blockquote class="quote" style="margin:0" id="qText"></blockquote><figcaption class="quote-attr" id="qAttr"></figcaption></div></div>
-<button type="button" class="sl-next" id="qNext" aria-label="Next quote"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 1.5 L9 6 L4 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-</figure>
-<div class="cog-row">
-<div class="cog-row-l"><div class="cog-prods" role="group" aria-label="Cognition products">
-<div class="cprod">Devin</div>
-<div class="cprod">Devin Desktop</div>
-<div class="cprod">Devin CLI</div>
-<div class="cprod">Devin Review</div>
-<div class="cprod">DeepWiki + Ask Devin</div>
-<div class="cprod">DANA · Security Swarm · Gov</div>
-</div></div>
-<figure class="cog-chart" role="img" aria-label="Stacked bar chart of effective engineering capacity: baseline team 100; AI copilots 130; Devin with 30, 50, 100, 400 and 900 autonomous engineers reaches 130, 150, 200, 500 and 1,000">
-<svg viewBox="0 0 460 264" aria-hidden="true">
-<g stroke="#e7e2d6" stroke-width="1"><line x1="44" y1="178" x2="456" y2="178"/><line x1="44" y1="138" x2="456" y2="138"/><line x1="44" y1="98" x2="456" y2="98"/><line x1="44" y1="58" x2="456" y2="58"/><line x1="44" y1="18" x2="456" y2="18"/></g>
-<line x1="44" y1="218" x2="456" y2="218" stroke="#c9c3b6" stroke-width="1"/>
-<g font-size="10.5" fill="#5b6272" text-anchor="end"><text x="38" y="221.5">0</text><text x="38" y="181.5">200</text><text x="38" y="141.5">400</text><text x="38" y="101.5">600</text><text x="38" y="61.5">800</text><text x="38" y="21.5">1,000</text></g>
-<text x="14" y="118" transform="rotate(-90,14,118)" text-anchor="middle" font-size="10.5" fill="#5b6272">Effective engineering capacity</text>
-<g><rect x="58.4" y="198" width="30" height="20" fill="#1f4e8c"/><rect x="117.3" y="198" width="30" height="20" fill="#1f4e8c"/><rect x="117.3" y="192" width="30" height="6" fill="#6cb4f0"/><rect x="176.1" y="198" width="30" height="20" fill="#1f4e8c"/><rect x="176.1" y="192" width="30" height="6" fill="#5cc9a0"/><rect x="235" y="198" width="30" height="20" fill="#1f4e8c"/><rect x="235" y="188" width="30" height="10" fill="#5cc9a0"/><rect x="293.9" y="198" width="30" height="20" fill="#1f4e8c"/><rect x="293.9" y="178" width="30" height="20" fill="#5cc9a0"/><rect x="352.7" y="198" width="30" height="20" fill="#1f4e8c"/><rect x="352.7" y="118" width="30" height="80" fill="#5cc9a0"/><rect x="411.6" y="198" width="30" height="20" fill="#1f4e8c"/><rect x="411.6" y="18" width="30" height="180" fill="#5cc9a0"/></g>
-<g class="cog-tot" font-size="10.5" fill="#5b6272" text-anchor="middle"><text x="73.4" y="190">100</text><text x="132.3" y="184">130</text><text x="191.1" y="184">130</text><text x="250" y="180">150</text><text x="308.9" y="170">200</text><text x="367.7" y="110">500</text><text x="426.6" y="10">1,000</text></g>
-<g class="cog-x" font-size="9.5" fill="#5b6272" text-anchor="middle">
-<text x="73.4" y="232"><tspan x="73.4">Baseline</tspan><tspan x="73.4" dy="11">team</tspan></text>
-<text x="132.3" y="232"><tspan x="132.3">AI copilots</tspan><tspan x="132.3" dy="11">(+30%)</tspan></text>
-<text x="191.1" y="226"><tspan x="191.1">+30 Devin</tspan><tspan x="191.1" dy="11">engineers</tspan></text>
-<text x="250" y="226"><tspan x="250">+50 Devin</tspan><tspan x="250" dy="11">engineers</tspan></text>
-<text x="308.9" y="226"><tspan x="308.9">+100 Devin</tspan><tspan x="308.9" dy="11">engineers</tspan></text>
-<text x="367.7" y="226"><tspan x="367.7">+400 Devin</tspan><tspan x="367.7" dy="11">engineers</tspan></text>
-<text x="426.6" y="226"><tspan x="426.6">+900 Devin</tspan><tspan x="426.6" dy="11">engineers</tspan></text>
-</g>
-</svg>
-<figcaption class="cog-legend"><span><i style="background:#1f4e8c" aria-hidden="true"></i>Human engineers</span><span><i style="background:#6cb4f0" aria-hidden="true"></i>Copilot uplift</span><span><i style="background:#5cc9a0" aria-hidden="true"></i>Devin autonomous capacity</span></figcaption>
-</figure>
-</div>
-<p class="cog-quote">Devin AI Now Writes <span class="t-green-h">91%</span> of Cognition's Own Code</p>
-<div class="grid two">
-<article class="card numcard"><div class="n">01</div><h3>Assistant turned Engineer</h3><p>Copilots wait for your next keystroke. Devin takes the whole ticket, plans it, writes the code, runs the tests and hands back a pull request ready for review. Hours of work, nobody babysitting.</p></article>
-<article class="card numcard" id="card-capacity" data-panel="capacityPanel" role="button" tabindex="0" aria-expanded="false" aria-controls="capacityPanel"><div class="n">02</div><h3>Engineering Capacity</h3><p>Every engineer gets a team of Devins working in parallel. Your people set direction and sign off; Devin carries the volume. The backlog moves without waiting on new hires.</p><span class="afford">See how capacity scales <span class="arr" aria-hidden="true">↓</span></span></article>
-</div>
-<div class="acc-panel" id="capacityPanel" role="region" aria-label="Local and cloud Devin capacity">
-<div class="acc-in">
-<div class="cp">
-<div class="eyebrow">Inside the platform</div>
-<div class="cap-row">
-<div class="cap-l">
-<h3 class="mp-h">Local speed, cloud capacity.</h3>
-<p class="mp-text">Devin Desktop makes each engineer faster at the keyboard. Devin in the cloud adds capacity no hiring plan can match: many agents working in parallel, each in its own environment, inside your VPC.</p>
-<h4 class="d1-h">Local Agent <i>Speed</i> + Cloud Agent <i>Capacity</i></h4>
-<div class="d1" id="capD1"></div>
-</div>
-<div class="cap2">
-<div class="d2">
-<h4 class="d2-h">How Fusion splits the work</h4>
-<svg viewBox="0 0 640 700" role="img" aria-label="Flow diagram: a main agent leads while a sidekick does the volume">
-<defs>
-<pattern id="capHatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#f2f0ea"/><line x1="0" y1="0" x2="0" y2="7" stroke="#dcd9cf" stroke-width="1.1"/></pattern>
-<marker id="capAH2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#0b1020" stroke-width="1.6"/></marker>
-</defs>
-<text x="165" y="40" text-anchor="middle" font-size="22" font-weight="600" fill="#0b1020">Main Agent</text>
-<text x="475" y="40" text-anchor="middle" font-size="22" font-weight="600" fill="#0b1020">Sidekick</text>
-<rect x="15" y="60" width="300" height="615" rx="8" fill="url(#capHatch)"/>
-<rect x="325" y="60" width="300" height="615" rx="8" fill="url(#capHatch)"/>
-<rect x="65" y="90" width="200" height="58" rx="4" fill="#e7ecff" stroke="#2f4bff" stroke-width="1.5"/>
-<text class="cap-box" x="165" y="124" text-anchor="middle" font-size="15" fill="#0b1020">User task</text>
-<rect x="65" y="200" width="200" height="52" rx="4" fill="#fff" stroke="#0b1020" stroke-width="1.5"/>
-<text class="cap-box" x="165" y="231" text-anchor="middle" font-size="15" fill="#0b1020">File snippets</text>
-<rect x="65" y="290" width="200" height="52" rx="4" fill="#fff" stroke="#0b1020" stroke-width="1.5"/>
-<text class="cap-box" x="165" y="321" text-anchor="middle" font-size="15" fill="#0b1020">Plan</text>
-<rect x="65" y="380" width="200" height="52" rx="4" fill="#fff" stroke="#0b1020" stroke-width="1.5"/>
-<text class="cap-box" x="165" y="411" text-anchor="middle" font-size="15" fill="#0b1020">Review code</text>
-<rect x="65" y="470" width="200" height="52" rx="4" fill="#fff" stroke="#0b1020" stroke-width="1.5"/>
-<text class="cap-box" x="165" y="501" text-anchor="middle" font-size="15" fill="#0b1020">Request edits</text>
-<rect x="65" y="560" width="200" height="52" rx="4" fill="#e5f4ec" stroke="#1f9d55" stroke-width="1.5"/>
-<text class="cap-box" x="165" y="591" text-anchor="middle" font-size="15" fill="#0b1020">Final code</text>
-<rect x="375" y="160" width="210" height="58" rx="4" fill="#fff" stroke="#0b1020" stroke-width="1.5"/>
-<text class="cap-box" x="480" y="194" text-anchor="middle" font-size="15" fill="#0b1020">Code exploration</text>
-<rect x="375" y="290" width="210" height="100" rx="4" fill="#fff" stroke="#0b1020" stroke-width="1.5"/>
-<text class="cap-box" x="480" y="324" text-anchor="middle" font-size="15" fill="#0b1020">Write code</text>
-<text class="cap-box" x="480" y="346" text-anchor="middle" font-size="15" fill="#0b1020">Write tests</text>
-<text class="cap-box" x="480" y="368" text-anchor="middle" font-size="15" fill="#0b1020">Fix lint</text>
-<rect x="375" y="455" width="210" height="56" rx="4" fill="#fff" stroke="#0b1020" stroke-width="1.5"/>
-<text class="cap-box" x="480" y="488" text-anchor="middle" font-size="15" fill="#0b1020">Fix bugs</text>
-<path class="cap-arrow" d="M265,119 h52 q14,0 14,14 v30 q0,14 14,14 h30" fill="none" stroke="#0b1020" stroke-width="1.7" marker-end="url(#capAH2)"/>
-<path class="cap-arrow" d="M480,218 v10 q0,14 -14,14 h-201" fill="none" stroke="#0b1020" stroke-width="1.7" marker-end="url(#capAH2)"/>
-<path class="cap-arrow" d="M265,316 h110" fill="none" stroke="#0b1020" stroke-width="1.7" marker-end="url(#capAH2)"/>
-<path class="cap-arrow" d="M375,385 h-110" fill="none" stroke="#0b1020" stroke-width="1.7" marker-end="url(#capAH2)"/>
-<path class="cap-arrow" d="M265,496 h110" fill="none" stroke="#0b1020" stroke-width="1.7" marker-end="url(#capAH2)"/>
-<path class="cap-arrow" d="M480,511 v40 q0,14 -14,14 h-201" fill="none" stroke="#0b1020" stroke-width="1.7" marker-end="url(#capAH2)"/>
-<path class="cap-down" d="M165,252 v34" fill="none" stroke="#0b1020" stroke-width="1.7" marker-end="url(#capAH2)"/>
-</svg>
-</div>
-<p class="cap2-cap">A frontier model leads: it reads the task, plans and reviews. A cost-efficient sidekick does the volume: exploring the code, writing, testing and fixing. Frontier quality, at a fraction of the cost.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<script>
-(function(){
-const DEFS=`<defs>
-<linearGradient id="capGL" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
-<linearGradient id="capGR" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f4bff"/><stop offset="1" stop-color="#2dd4bf"/></linearGradient>
-<marker id="capAH" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#0b1020" stroke-width="1.6"/></marker>
-<g id="capPerson"><circle cx="0" cy="-6" r="6" fill="none" stroke="#0b1020" stroke-width="1.7"/><path d="M-11,12 a11,11 0 0 1 22,0" fill="none" stroke="#0b1020" stroke-width="1.7"/></g>
-<g id="capLap"><rect x="-11" y="-8" width="22" height="14" rx="2" fill="#fff" stroke="#0b1020" stroke-width="1.6"/><path d="M-14,8.5 H14" stroke="#0b1020" stroke-width="1.6" stroke-linecap="round"/><g fill="#2f4bff"><circle cx="-3.5" cy="-2" r="1.5"/><circle cx="3.5" cy="-2" r="1.5"/><circle cx="0" cy="2" r="1.5"/></g></g>
-<g id="capTile"><rect x="-13.5" y="-13.5" width="27" height="27" rx="6" fill="#fff" stroke="#0b1020" stroke-width="1.5"/><g fill="#2f4bff"><circle cx="-5" cy="-5" r="2"/><circle cx="5" cy="-5" r="2"/><circle cx="0" cy="5" r="2"/></g></g>
-<g id="capDB"><ellipse cx="0" cy="-7" rx="9" ry="3.4" fill="#fff" stroke="#0b1020" stroke-width="1.5"/><path d="M-9,-7 v13 a9,3.4 0 0 0 18,0 v-13" fill="#fff" stroke="#0b1020" stroke-width="1.5"/></g>
-</defs>`;
-const L=(x1,y1,x2,y2)=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#0b1020" stroke-width="1" stroke-dasharray="2 4"/>`;
-const lbl=(x,y,t)=>`<text x="${x}" y="${y}" font-size="10.5" fill="#6b7280" letter-spacing=".4">${t}</text>`;
-const box=(bx,by,side)=>{
-  const g=side==='L'?'capGL':'capGR';
-  const kick=side==='L'?'Local AI IDE':'Cloud AI Agents';
-  const title=side==='L'?'Devin Desktop for individual speed.':'Devin for unlimited parallel capacity.';
-  const foot=side==='L'?'Local • Synchronous • 1-to-1':'Cloud • Asynchronous • 1-to-Many';
-  const cx=bx+233;
-  let inner='';
-  if(side==='L'){
-    const cols=[bx+155,bx+230,bx+305,bx+380];
-    inner=lbl(bx+48,by+180,'Devs')
-      +cols.map(x=>`<use href="#capPerson" x="${x}" y="${by+176}"/>`).join('')
-      +cols.map(x=>L(x,by+192,x,by+226)).join('')
-      +lbl(bx+48,by+244,'Devin Desktop')
-      +cols.map(x=>`<use href="#capLap" x="${x}" y="${by+240}"/>`).join('')
-      +cols.map(x=>L(x,by+252,x,by+306)).join('')
-      +lbl(bx+48,by+324,'Env')
-      +cols.map(x=>`<text x="${x}" y="${by+324}" text-anchor="middle" font-size="10" font-style="italic" fill="#6b7280">Local IDE</text>`).join('');
-  }else{
-    const cols=[bx+132,bx+238,bx+344];
-    const tiles=[[-1,0,1],[-1.5,-0.5,0.5,1.5],[-1,0,1]];
-    const tx=(x,o)=>x+o*27,ty=o=>by+240-o*6;
-    inner=lbl(bx+48,by+180,'Devs')
-      +cols.map(x=>`<use href="#capPerson" x="${x}" y="${by+176}"/>`).join('')
-      +cols.map((x,i)=>tiles[i].map(o=>L(x,by+192,tx(x,o),ty(o)-13.5)).join('')).join('')
-      +lbl(bx+48,by+244,'Devin')
-      +cols.map((x,i)=>tiles[i].map(o=>`<use href="#capTile" x="${tx(x,o)}" y="${ty(o)}"/>`).join('')).join('')
-      +cols.map((x,i)=>tiles[i].map(o=>L(tx(x,o),ty(o)+13.5,bx+238,by+308)).join('')).join('')
-      +lbl(bx+48,by+324,'Env')
-      +`<use href="#capDB" x="${bx+238}" y="${by+322}"/>`
-      +`<text x="${bx+255}" y="${by+325}" font-size="10" font-style="italic" fill="#6b7280">in VPC</text>`;
-  }
-  return `<rect x="${bx}" y="${by}" width="466" height="446" rx="20" fill="#fff" stroke="#0b1020" stroke-width="1.5"/>
-<path d="M${bx},${by+20} Q${bx},${by} ${bx+20},${by} H${bx+446} Q${bx+466},${by} ${bx+466},${by+20}" fill="none" stroke="url(#${g})" stroke-width="4"/>
-<text x="${cx}" y="${by+66}" text-anchor="middle" font-size="12.5" fill="#6b7280" letter-spacing="1.4">${kick}</text>
-<text class="cap-bt" x="${cx}" y="${by+98}" text-anchor="middle" font-size="17" font-weight="600" fill="#0b1020">${title}</text>
-<line x1="${bx+133}" y1="${by+116}" x2="${bx+333}" y2="${by+116}" stroke="#0b1020" stroke-width="1"/>
-<rect x="${bx+36}" y="${by+140}" width="394" height="210" rx="16" fill="none" stroke="#0b1020" stroke-width="1.2" stroke-dasharray="2 5" stroke-linecap="round"/>
-${inner}
-<text class="cap-bf" x="${cx}" y="${by+418}" text-anchor="middle" font-size="12" font-style="italic" fill="#5b5344">${foot}</text>`;
-};
-const render=()=>{
-  const stack=matchMedia('(max-width: 720px)').matches;
-  const el=document.getElementById('capD1');
-  el.innerHTML=stack
-    ?`<svg viewBox="0 0 506 968" role="img" aria-label="Local Devin Desktop for individual speed plus cloud Devin agents for parallel capacity">${DEFS}${box(20,10,'L')}
-      <path d="M238,468 v30" fill="none" stroke="#0b1020" stroke-width="1.7" marker-end="url(#capAH)"/>
-      <path d="M268,498 v-30" fill="none" stroke="#0b1020" stroke-width="1.7" marker-end="url(#capAH)"/>
-      ${box(20,512,'R')}</svg>`
-    :`<svg viewBox="0 0 1000 470" role="img" aria-label="Local Devin Desktop for individual speed plus cloud Devin agents for parallel capacity">${DEFS}${box(12,12,'L')}
-      <path d="M484,90 H516" fill="none" stroke="#0b1020" stroke-width="1.7" marker-end="url(#capAH)"/>
-      <path d="M516,398 H484" fill="none" stroke="#0b1020" stroke-width="1.7" marker-end="url(#capAH)"/>
-      ${box(522,12,'R')}</svg>`;
-};
-matchMedia('(max-width: 720px)').addEventListener('change',render);
-render();
-})();
-</script>
-<script>
-(function(){
-const QUOTES={
-default:[
-{t:"You're delegating work, and then the agent is going off and doing it.",a:"Russell Kaplan, President of Cognition"},
-{t:"Within two days I had a hundred agents working while I slept, and I realized the bottleneck had quietly moved. It was no longer how fast I could write code. It was how fast I could decide what should exist.",a:"Vitor Vavolizza, CTO, Tavrn"},
-{t:"We're able to function as if we're a team of 100, with just eight people, because we're working with Devin.",a:"Joowon Kim, Co-Founder, Melius"}
-],
-models:[
-{k:"WPP Enterprise Solutions, on model choice",t:"An engineer might plan their work with a frontier model, then execute with SWE-1.6 because it feels like they're still in the code, working with a copilot… Giving engineers that choice is huge.",a:"Shahil Bhimji, Chief Engineering Officer, WPP Enterprise Solutions"},
-{k:"Endava, on new frontier models arriving near-immediately",t:"It feels like we're being listened to, and the product is much more capable than it was even a year and a half ago.",a:"Rob Purcell, Dava.X AI Group, Endava"},
-{k:"FE fundinfo, comparing AI systems side by side",t:"Devin's understanding of our codebases is substantially better than some other AI systems our teams use. It's a very nuanced difference until you compare them side by side.",a:"Richard Thorpe, Head of Engineering, FE fundinfo"}
-],
-engineer:[
-{t:"Devin's really in a class of its own for long-running, context-heavy tasks. Most agents, you have to hand-feed the relevant failure log. Devin really sits with it like a senior engineer. It'll chew on the problem, come back to you, and let you know when it's done.",a:"Andrew Foong, Technical Chief of Staff, Eight Sleep"},
-{t:"It really was much more like having a remote coworker rather than a sidebar in my IDE.",a:"Beau Rothrock, Data Engineer, AngelList"},
-{t:"We treat Devin as an autonomous teammate who plans complex tasks for us. To be honest, I forgot how it was before.",a:"Kamila Niedźwiedź-Blok, Business Analyst, ERP XL, Comarch"}
-],
-capacity:[
-{t:"Our team's output is about 6x'ed since Devin. We're eight engineers, but we ship like fifty, and the reason is parallelism…",a:"Alex Pedersen, Member of Technical Staff, Tavrn"},
-{t:"Biggest unlock with Devin is capacity to parallelize… You can parallelize six different product features and work on each independently.",a:"Faris Ibrahim, Software Engineer, Finch Legal"},
-{t:"We're able to function as if we're a team of 100, with just eight people, because we're working with Devin.",a:"Joowon Kim, Co-Founder, Melius"}
-]};
-const stage=document.getElementById('qStage'),slide=document.getElementById('qSlide'),
-      kick=document.getElementById('qKick'),txt=document.getElementById('qText'),
-      attr=document.getElementById('qAttr'),nxt=document.getElementById('qNext'),
-      fig=document.getElementById('qrot');
-const RM=matchMedia('(prefers-reduced-motion: reduce)');
-let set='default',idx=0,timer=null,fadeT=null,hover=false,focused=false;
-const slideHTML=q=>(q.k?`<div class="q-kicker">${q.k}</div>`:'')+
-  `<blockquote class="quote" style="margin:0">"${q.t}"</blockquote>`+
-  `<figcaption class="quote-attr">— ${q.a}</figcaption>`;
-const render=()=>{
-  const q=QUOTES[set][idx];
-  kick.hidden=!q.k;if(q.k)kick.textContent=q.k;
-  txt.textContent='"'+q.t+'"';attr.textContent='— '+q.a;
-};
-const show=(i,fade)=>{
-  idx=i;
-  clearTimeout(fadeT);
-  if(fade&&!RM.matches){
-    slide.classList.add('q-out');
-    fadeT=setTimeout(()=>{render();slide.classList.remove('q-out');},400);
-  }else render();
-};
-const start=()=>{if(timer!==null||hover||focused||document.hidden)return;
-  timer=setInterval(()=>show((idx+1)%QUOTES[set].length,true),7000);};
-const stop=()=>{clearInterval(timer);timer=null;};
-const restart=()=>{stop();start();};
-nxt.addEventListener('click',()=>{show((idx+1)%QUOTES[set].length,true);restart();});
-window.__quoteTick=()=>show((idx+1)%QUOTES[set].length,true);
-window.__quoteData=()=>({set,idx,QUOTES});
-const measure=()=>{
-  if(!stage.clientWidth)return;
-  const probe=document.createElement('div');
-  probe.className='q-slide q-probe';
-  stage.appendChild(probe);
-  let h=0;
-  QUOTES[set].forEach(q=>{probe.innerHTML=slideHTML(q);h=Math.max(h,probe.offsetHeight);});
-  probe.remove();
-  stage.style.minHeight=h+'px';
-};
-new ResizeObserver(measure).observe(stage);
-const PANEL_SET={modelsPanel:'models',capacityPanel:'capacity'};
-const currentSet=()=>{
-  const open=[...document.querySelectorAll('#cognition [data-panel]')]
-    .find(c=>c.getAttribute('aria-expanded')==='true');
-  if(!open)return 'default';
-  const id=open.dataset.panel;
-  if(PANEL_SET[id])return PANEL_SET[id];
-  const guess=id.replace(/Panel$/,'').toLowerCase();
-  return QUOTES[guess]?guess:'default';
-};
-new MutationObserver(()=>{
-  const ns=currentSet();
-  if(ns===set)return;
-  set=ns;idx=0;show(0,false);measure();restart();
-}).observe(document.getElementById('cognition'),{subtree:true,attributes:true,attributeFilter:['aria-expanded']});
-fig.addEventListener('mouseenter',()=>{hover=true;stop();});
-fig.addEventListener('mouseleave',()=>{hover=false;start();});
-fig.addEventListener('focusin',()=>{focused=true;stop();});
-fig.addEventListener('focusout',e=>{if(!fig.contains(e.relatedTarget)){focused=false;start();}});
-document.addEventListener('visibilitychange',()=>{document.hidden?stop():start();});
-render();measure();start();
-})();
-</script>
-<div class="section-label"><h3>Customer Success Stories</h3></div>
-<div class="grid three">
-<article class="card"><div class="kicker">Automotive, legacy code</div><h3 style="margin-top:9px">Mercedes-Benz</h3><p>Devin worked through more than 200,000 lines of COBOL. A modernization estimate of eight months came down to eight days.</p></article>
-<article class="card"><div class="kicker">Vehicle software, testing</div><h3 style="margin-top:9px">RV Tech (Rivian and VW)</h3><p>Test writing got 10 to 15 times faster, and three or four engineers went back to product work.</p></article>
-<article class="card"><div class="kicker">Banking at scale</div><h3 style="margin-top:9px">Itaú</h3><p>They moved 59 services from .NET to Java six times faster, and 70% of their vulnerabilities now get fixed automatically.</p></article>
-</div>
-<div class="metrics" style="margin:34px 0 34px">
-<div class="metric"><div class="value">$1B+</div><div class="label">annualized revenue run rate, crossed September 25</div></div>
-<div class="metric"><div class="value">$48B</div><div class="label">valuation at the Series E</div></div>
-<div class="metric"><div class="value">67%</div><div class="label">of Devin's pull requests get merged, up from 34% a year ago</div></div>
-<div class="metric"><div class="value">89%</div><div class="label">of Cognition's own code is written by Devin</div></div>
-<div class="metric"><div class="value">&gt;10x</div><div class="label">growth in enterprise usage this year</div></div>
-</div>
-<p class="fine" style="margin:-18px 0 0">Figures reported by Cognition.</p>
-<div class="section-label"><h3>Public customers</h3></div>
 <div class="wall">
 <figure class="wtile"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAAAhCAYAAAB9VDPAAAAEL0lEQVR4nN2ZW4hNURjHf3OcBk2TNI0mTZNciibJ5UGahkTjSW65JiXXXB5cGuFFozwwhYw8uCtyiQcPbg+EJJc0aXJnktAgTZNEnPRN/12rZZ9z9p6LOeZfu9Nee+219n993/q+//pOXnV1NTmA/sBgoAQoBPoA34CvwGfgNfAWSMUZNEnXYQAwG1gF9NW39AASTh8j81u/H4BDwDngZS6SM8uMAJYAU4H8GO+aZXcANcB1YA9QD7zLBXJmpcVAJdA7TR9zxRagGSiQRe3X/+bJwDjgkax5GvjeFeTs4w4D09JY6h5wAbgGPPX2VUIWmwDMAMY6YxQAFWqza70W55+RGw7s1Eq7e+kJcAk4C9zNMka9rj0aby4wHRii77druQguUt9WuBN2NMxtTgFVzjzmcnXATK10OmJmnYkh7Y+BLXp/r6JpgOFy0ZGdTc4mOAaUO23fFEjWynLpUClX3ZehzxNgIzBH+zPgMhq4AgwMGjoaRcBu7ZUAFtEWAGcy5Kpi4Lz2nkXUnlnmSanvNFnUHcfSxbDO2HOlwE3gtu5/KXTfiPCe7aW4uAEsVDR2iRd3BrkgAPxL1IfNmY1cQtLIJFEvWSHIRZ/IcSQzPKtSVCqX1jOCP0XMotQD4CJwJ80+MjWy0rm3JHsceK95Z0mCuW7pwubcFDKuBZCjGs/EwHygTM9+Kxp/sZu8EOFcrjBbmYV8StcRYFnIc4tYL5x7W5DxQIMW6rQW0IUf4MIWzUT0GJEsUhCyZI48qzzQnv5gtgpXlWOiuKz1WQq8UhIN6xNcmZ7F6eP3S/u+S2C21ITtMRcNSrZP5SplsuoAz0q1CveNZEdKK+/u216yqNun1b08uIk7IwJyZVITLvsWqYG6EPdIaD9tk2vY8/vaT1FgQWme12YecMC5b5TECkMqKrneSrousWYpieMZBq+Tb9cqr21RwImKVIQPjnU4DSM3VIrAhX34SbLDpE6TXPavI0dXIynTl3rRyKwQFXamykkkZDn3nGW5q1sgAfTz2j7Sjcjle23pSgD/JbnnXlsgZboFuVfKaQEmxaxK5TS5l17yLVVyjoqqENGbM+QagMte+wZgXUhZzUW+ijUHgVuOeG0rPoeMX9ZecimdAhq9/LdVH17hadCESm0n9F6pdOZ+FWnaCsuvLopU1SrwCNvckcojSWfgKbKA1SBQQXSuri8qyhSKjE0cpheDYk1bUC9RbPMGUXszsEZbx4T1INVjRkWZy12BZ1L1VnnyUSQLjggh9ksybIX+rGgPVoeo/kJV04bFDXRJ796qSW9UcFkcIVA0SIee66CywxktXo2OV+1CXoa/sIp1xpullSvQ/mxSKW27Sg3pTgJ9vLplSt4R5TxWorNlpXO+bNbi7wIeqs2MY/vcFR6mdVtFfCZyPsw9fsQ81nQEAgvG3s9/AHQ15t4Q+eEXAAAAAElFTkSuQmCC" alt="Citi"></figure>
 <figure class="wtile"><img src="data:image/png;base64,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" alt="Mercedes-Benz"></figure>
@@ -652,8 +339,7 @@ render();measure();start();
 <figure class="wtile"><img src="data:image/png;base64,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" alt="NASA"></figure>
 <figure class="wtile"><img src="data:image/png;base64,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" alt="ServiceNow"></figure>
 </div>
-</section>
-<section class="panel" id="challenge" role="tabpanel" aria-labelledby="tab-challenge" hidden>
+</section><section class="panel" id="challenge" role="tabpanel" aria-labelledby="tab-challenge" hidden>
 <div class="eyebrow">04 · Differentiation</div>
 <h2 class="h2-one ch-title">What would you do with an <span class="t-green-h">infinite</span> army of engineers?</h2>
 <p class="ch-sub">"Devin AI Now Writes 89% of Cognition's Own Code"</p>
@@ -1057,29 +743,6 @@ function showTab(id){if(!sections.some(s=>s[0]===id))id='intro';current=id;
 function go(id){if(location.hash==='#'+id){showTab(id)}else location.hash=id;}
 window.addEventListener('hashchange',()=>showTab(location.hash.slice(1)));
 document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g){go(g.dataset.go);}});
-// expandable card panels (generic: data-panel -> panel id)
-$$('[data-panel]').forEach(card=>{
-  const panel=document.getElementById(card.dataset.panel);
-  if(!panel)return;
-  const tog=()=>{
-    const open=!panel.classList.contains('open');
-    if(open)$$('[data-panel]').forEach(c=>{
-      if(c===card)return;
-      const p=document.getElementById(c.dataset.panel);
-      if(p)p.classList.remove('open');
-      c.setAttribute('aria-expanded','false');
-    });
-    panel.classList.toggle('open',open);card.setAttribute('aria-expanded',open?'true':'false');};
-  card.addEventListener('click',tog);
-  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();tog();}});
-});
-// state chapter quote carousel (selector kept for when the carousel is present)
-{const slc=document.querySelector('#state .s-lead');
-if(slc){const btn=slc.querySelector('.sl-next'),slides=[...slc.querySelectorAll('.sl-slide')];
-  btn.addEventListener('click',()=>{
-    const i=(+slc.dataset.i+1)%slides.length;
-    slc.dataset.i=i;
-    slides.forEach((s,j)=>s.setAttribute('aria-hidden',j===i?'false':'true'));});}}
 // challenge chapter: flippable customer cards (click/Enter/Space on the button)
 $$('.cust').forEach(c=>{const [front,back]=c.querySelectorAll('.cust-face');
   c.addEventListener('click',()=>{
