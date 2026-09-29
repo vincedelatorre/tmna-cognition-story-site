@@ -40,7 +40,7 @@ body[data-accent="red"]{--accent:#eb0a1e;--accent-dim:#ff6b76}
 /* challenge: product surfaces + use cases (adapted from a user-supplied reference) */
 .ps-h{font-family:Georgia,'Times New Roman',serif;font-size:20px;font-weight:600;letter-spacing:-.3px;color:var(--ink);margin-top:28px}
 .ps-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
-.psc{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;position:relative;min-height:110px;min-width:0}
+.psc{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;position:relative;min-height:140px;min-width:0}
 .psc-wide{grid-column:span 2}
 .psc-inner{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
 .psc.flipped .psc-inner{transform:rotateY(180deg)}
@@ -88,6 +88,14 @@ body[data-accent="red"]{--accent:#eb0a1e;--accent-dim:#ff6b76}
 .lf-group{border:1.5px solid var(--accent);border-radius:10px;padding:8px}
 .lf-back{margin-top:10px;font-size:12px;color:var(--muted);text-align:center}
 }
+.ps-row{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:8px;align-items:stretch}
+@media(min-width:1181px){
+.ps-row .uc{margin-top:0;display:flex;flex-direction:column}
+.ps-row .uc .sc-lab{margin-top:28px;height:23px}
+.ps-row .uc .uc-grid{margin-top:10px;flex:1;grid-template-columns:1fr;grid-template-rows:repeat(4,minmax(0,1fr))}
+.ps-row .uc-card{display:flex;align-items:center;padding:0 16px}
+}
+@media(max-width:1180px){.ps-row{grid-template-columns:minmax(0,1fr)}}
 .uc{margin-top:10px}
 .uc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:8px}
 .uc-card{background:#fdfcfa;border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:15px;font-weight:600;color:var(--ink)}
@@ -466,6 +474,7 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 <section class="panel" id="challenge" role="tabpanel" aria-labelledby="tab-challenge" hidden>
 <div class="eyebrow">04 · Differentiation</div>
 <h2 class="h2-one ch-title">What would you do with an <span class="t-green-h">infinite</span> army of engineers?</h2>
+<div class="ps-row">
 <div class="ps">
 <h3 class="ps-h">Product surfaces for the full SDLC. One foundation.</h3>
 <div class="ps-grid">
@@ -570,6 +579,7 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 <div class="uc-card">Codebase understanding</div>
 <div class="uc-card">Incident triage</div>
 <div class="uc-card">Vulnerability remediation</div>
+</div>
 </div>
 </div>
 <div class="evo">
