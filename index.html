@@ -55,6 +55,39 @@ body[data-accent="red"]{--accent:#eb0a1e;--accent-dim:#ff6b76}
 .psc-chip{border:1px solid var(--line);border-radius:6px;padding:3px 8px;font-size:11px;color:var(--ink);line-height:1.3}
 .psc-more{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
 .ps .sc-dash,.uc .sc-dash{background:var(--muted)}
+.evo{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:16px}
+.evo-card{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:16px 18px;display:flex;flex-direction:column;min-width:0}
+.evo-segs{display:flex;gap:6px}
+.evo-segs i{height:4px;width:26px;border-radius:2px;background:var(--line)}
+.evo-segs i.on{background:var(--accent)}
+.evo-num{font-family:Georgia,'Times New Roman',serif;font-size:44px;font-weight:400;line-height:1.05;color:#c9c3b6;margin-top:14px}
+.evo-t{font-size:19px;font-weight:650;color:var(--ink);margin-top:8px;letter-spacing:-.3px}
+.evo-s{font-size:13.5px;color:var(--muted);margin-top:3px}
+.evo-div{border-top:1px solid var(--line);margin-top:auto;padding-top:0}
+.evo-kv{display:flex;flex-direction:column;gap:2px;margin-top:12px}
+.evo-k{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+.evo-v{font-size:13.5px;font-weight:600;color:var(--ink)}
+.evo-hl{background:var(--nav);border-color:rgba(255,255,255,.08)}
+.evo-hl .evo-num{color:rgba(255,255,255,.55)}
+.evo-hl .evo-t,.evo-hl .evo-v{color:#fff}
+.evo-hl .evo-s,.evo-hl .evo-k{color:rgba(255,255,255,.7)}
+.evo-hl .evo-segs i{background:rgba(255,255,255,.3)}
+.evo-hl .evo-segs i.on{background:#fff}
+.evo-hl .evo-div{border-color:rgba(255,255,255,.15)}
+@media(max-width:1180px){.evo{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.evo{grid-template-columns:1fr}}
+.loop{margin-top:28px}
+.loop-card{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:22px;margin-top:12px}
+.loop-card svg{width:100%;height:auto}
+.loop-fb{display:none}
+@media(max-width:720px){
+.loop-card svg{display:none}
+.loop-fb{display:block}
+.lf-box{border:1px solid var(--line);border-radius:6px;padding:10px 14px;font-size:14px;font-weight:600;text-align:center}
+.lf-arr{text-align:center;color:var(--muted);font-size:14px;line-height:1.4}
+.lf-group{border:1.5px solid var(--accent);border-radius:10px;padding:8px}
+.lf-back{margin-top:10px;font-size:12px;color:var(--muted);text-align:center}
+}
 .uc{margin-top:10px}
 .uc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:8px}
 .uc-card{background:#fdfcfa;border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:15px;font-weight:600;color:var(--ink)}
@@ -537,6 +570,88 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 <div class="uc-card">Codebase understanding</div>
 <div class="uc-card">Incident triage</div>
 <div class="uc-card">Vulnerability remediation</div>
+</div>
+</div>
+<div class="evo">
+<div class="evo-card">
+<div class="evo-segs"><i class="on"></i><i></i><i></i><i></i></div>
+<div class="evo-num">01</div>
+<div class="evo-t">Tab completion</div>
+<div class="evo-s">Speeds up execution</div>
+<div class="evo-div"></div>
+<div class="evo-kv"><span class="evo-k">Pioneer</span><span class="evo-v">GitHub Copilot</span></div>
+<div class="evo-kv"><span class="evo-k">Autonomy</span><span class="evo-v">Inline suggestions</span></div>
+</div>
+<div class="evo-card">
+<div class="evo-segs"><i class="on"></i><i class="on"></i><i></i><i></i></div>
+<div class="evo-num">02</div>
+<div class="evo-t">Local AI agent</div>
+<div class="evo-s">Accelerates individual developers</div>
+<div class="evo-div"></div>
+<div class="evo-kv"><span class="evo-k">Pioneers</span><span class="evo-v">Cursor · Claude Code</span></div>
+<div class="evo-kv"><span class="evo-k">Autonomy</span><span class="evo-v">Executes tasks with feedback</span></div>
+</div>
+<div class="evo-card">
+<div class="evo-segs"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+<div class="evo-num">03</div>
+<div class="evo-t">AI software engineer</div>
+<div class="evo-s">Expands your team's capacity</div>
+<div class="evo-div"></div>
+<div class="evo-kv"><span class="evo-k">Pioneer</span><span class="evo-v">Devin ('24)</span></div>
+<div class="evo-kv"><span class="evo-k">Autonomy</span><span class="evo-v">Completes work end-to-end</span></div>
+</div>
+<div class="evo-card evo-hl">
+<div class="evo-segs"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+<div class="evo-num">04</div>
+<div class="evo-t">Self-driving SDLC</div>
+<div class="evo-s">Delivers business outcomes</div>
+<div class="evo-div"></div>
+<div class="evo-kv"><span class="evo-k">Pioneer</span><span class="evo-v">Devin Platform</span></div>
+<div class="evo-kv"><span class="evo-k">Autonomy</span><span class="evo-v">Continuously self-improving</span></div>
+</div>
+</div>
+<div class="loop">
+<h3 class="ps-h">Agents can now close the loop</h3>
+<div class="loop-card">
+<svg viewBox="0 0 1060 276" role="img" aria-label="Five-step loop: Understanding codebase, Planning out a change, Writing the code, Review, Testing and QA, with a return arrow back to Understanding codebase">
+<g font-size="15" font-weight="500" text-anchor="middle">
+<rect x="43" y="8" width="200" height="44" rx="6" fill="#f1efe9" stroke="#d9d5cc"/>
+<text x="143" y="35" fill="#0b1020">Understanding codebase</text>
+<path d="M243 30 H333 V56" fill="none" stroke="#9aa0ab" stroke-width="1.5" stroke-dasharray="2 4"/>
+<path d="M329 49 L337 49 L333 57 Z" fill="#9aa0ab"/>
+<rect x="233" y="56" width="200" height="44" rx="6" fill="#e3ded3" stroke="#d9d5cc"/>
+<text x="333" y="83" fill="#0b1020">Planning out a change</text>
+<path d="M433 78 H523 V104" fill="none" stroke="#9aa0ab" stroke-width="1.5" stroke-dasharray="2 4"/>
+<path d="M519 97 L527 97 L523 105 Z" fill="#9aa0ab"/>
+<rect x="423" y="104" width="200" height="44" rx="6" fill="#c9c3b6" stroke="#d9d5cc"/>
+<text x="523" y="131" fill="#0b1020">Writing the code</text>
+<path d="M623 126 H713 V152" fill="none" stroke="#9aa0ab" stroke-width="1.5" stroke-dasharray="2 4"/>
+<path d="M709 145 L717 145 L713 153 Z" fill="#9aa0ab"/>
+<rect x="613" y="152" width="200" height="44" rx="6" fill="#5b6272"/>
+<text x="713" y="179" fill="#ffffff">Review</text>
+<path d="M813 174 H903 V200" fill="none" stroke="#9aa0ab" stroke-width="1.5" stroke-dasharray="2 4"/>
+<path d="M899 193 L907 193 L903 201 Z" fill="#9aa0ab"/>
+<rect x="803" y="200" width="200" height="44" rx="6" fill="#0b1020"/>
+<text x="903" y="227" fill="#ffffff">Testing and QA</text>
+<rect x="599" y="138" width="418" height="120" rx="10" fill="none" stroke="#2f4bff" stroke-width="1.5"/>
+<path d="M803 222 H143 V54" fill="none" stroke="#9aa0ab" stroke-width="1.5" stroke-dasharray="2 4"/>
+<path d="M139 61 L147 61 L143 53 Z" fill="#9aa0ab"/>
+</g>
+</svg>
+<div class="loop-fb">
+<div class="lf-box" style="background:#f1efe9;color:#0b1020">Understanding codebase</div>
+<div class="lf-arr">↓</div>
+<div class="lf-box" style="background:#e3ded3;color:#0b1020">Planning out a change</div>
+<div class="lf-arr">↓</div>
+<div class="lf-box" style="background:#c9c3b6;color:#0b1020">Writing the code</div>
+<div class="lf-arr">↓</div>
+<div class="lf-group">
+<div class="lf-box" style="background:#5b6272;color:#fff">Review</div>
+<div class="lf-arr">↓</div>
+<div class="lf-box" style="background:#0b1020;color:#fff">Testing and QA</div>
+</div>
+<div class="lf-back">↺ back to Understanding codebase</div>
+</div>
 </div>
 </div>
 <div class="cust-grid">
