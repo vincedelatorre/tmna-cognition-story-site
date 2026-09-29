@@ -113,48 +113,11 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 .fan-ul li:first-child{margin-top:0}
 .fan-ul li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:1.5px;background:var(--sc)}
 @media(max-width:860px){.fan{grid-template-columns:minmax(0,1fr)}.fan-lines{display:none}.fan-root{font-size:20px;padding:22px 20px}.fan-subs{margin-top:18px}}
-.s-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
-.scard{position:relative;min-width:0;perspective:1400px}
-.sf-inner{position:relative;height:100%;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
-.scard.flipped .sf-inner{transform:rotateY(180deg)}
-.sf-front,.sf-back{background:#fdfcfa;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden}
-.sf-front{position:relative;height:100%;display:flex;flex-direction:column;padding:26px 24px 24px}
-.sf-back{position:absolute;inset:0;display:flex;flex-direction:column;padding:22px 22px 16px;transform:rotateY(180deg);background:var(--nav);border-color:rgba(255,255,255,.08);text-align:center}
-.sf-front::before,.sf-back::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sc),color-mix(in srgb,var(--sc) 30%,#fff))}
-.sf-flip{position:absolute;inset:0;width:100%;height:100%;background:none;border:0;padding:0;margin:0;cursor:pointer;border-radius:14px}
-.sf-flip:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.sf-ic{position:absolute;right:12px;bottom:12px;width:28px;height:28px;border-radius:50%;background:#f1efe9;color:var(--muted);display:flex;align-items:center;justify-content:center}
-.sf-ic svg{width:13px;height:13px;display:block}
-.sf-unflip{position:absolute;top:14px;right:14px;z-index:3;width:24px;height:24px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:transparent;color:rgba(255,255,255,.75);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
-.sf-unflip svg{width:11px;height:11px;display:block}
-.sf-unflip:hover{border-color:#fff;color:#fff}
-.sf-back .sc-lab{justify-content:center;color:rgba(255,255,255,.7)}
-.sf-back .sc-body{display:block;text-align:center;line-height:1.55;color:rgba(255,255,255,.92);margin:auto 0;padding:14px 0}.sf-back .sf-src{margin-top:0}
-.sf-back .sf-mid{margin:auto 0;padding:14px 0}
-.sf-back .sf-bstat{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:700;line-height:1.15;letter-spacing:-.3px;color:#fff}
-.sf-back .sf-bcap{margin-top:8px;font-size:12.5px;line-height:1.5;color:rgba(255,255,255,.7)}
-.sf-hl{background:color-mix(in srgb,var(--sc) 45%,transparent);color:#fff;padding:1px 3px;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-.sf-src{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:auto;padding-top:14px}
-.sf-src-t{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.4px;color:rgba(255,255,255,.6)}
-.sf-info{flex:none;width:24px;height:24px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:transparent;color:rgba(255,255,255,.75);font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:12px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
-.sf-info:hover,.sf-info[aria-expanded="true"]{border-color:#fff;color:#fff}
-.sf-info:focus-visible,.sf-unflip:focus-visible,.sf-x:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.sf-pop{position:absolute;inset:10px;z-index:6;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 28px rgba(11,16,32,.14);padding:14px;font-size:12.5px;line-height:1.5;color:rgba(11,16,32,.8);overflow:auto}
-.sf-pop[hidden]{display:none}
-.sf-pop p{margin:0;padding-right:22px}
-.sf-x{position:absolute;top:8px;right:8px;width:22px;height:22px;border:0;border-radius:50%;background:#f1efe9;color:var(--muted);cursor:pointer;font-size:14px;line-height:1;display:flex;align-items:center;justify-content:center;padding:0}
-.sf-x:hover{background:#e7e3d8;color:var(--ink)}
-.sf-links{margin-top:10px;display:flex;flex-direction:column;gap:6px}
-.sf-links a{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;line-height:1.5;color:var(--accent);word-break:break-all}
-@media(prefers-reduced-motion:reduce){.sf-inner{transition:none}.nf-inner{transition:none}}
+@media(prefers-reduced-motion:reduce){.nf-inner{transition:none}}
 .sc-green{--sc:#1f9d55}.sc-blue{--sc:#2f4bff}.sc-red{--sc:#eb0a1e}
 .sc-lab{display:flex;align-items:center;gap:10px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted)}
 .sc-num{color:var(--sc);font-weight:700}
 .sc-dash{width:18px;height:2px;background:var(--sc);flex:none}
-.sc-body{font-size:14px;line-height:1.6;color:rgba(11,16,32,.72);margin:14px 0 0;text-wrap:pretty}
-.sc-stat{margin-top:auto;padding-top:18px;font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:700;line-height:1.05;letter-spacing:-.5px;color:var(--sc)}
-.sc-cap{margin-top:8px;font-size:12.5px;line-height:1.5;color:var(--muted)}
-@media(max-width:980px){.s-cards{grid-template-columns:minmax(0,1fr)}}
 .composer{width:512px;max-width:100%;background:#262626;border:1px solid #3a3a3a;border-radius:10px;padding:10px 12px 8px;min-width:0;box-shadow:0 10px 30px #0b102018}
 .cmp-l1{display:flex;align-items:center;gap:8px;min-width:0}
 .caret{width:1px;height:14px;background:#cfcfcf;flex:none;animation:caret 1s step-end infinite}
@@ -387,74 +350,6 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 <div class="fan-sub sc-red">
 <div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Legacy code refactor &amp; migration</div>
 <ul class="fan-ul"><li>~220 billion lines of COBOL</li><li>10,000+ programs</li><li>40M+ lines of COBOL refactored, quality scored 3.44</li></ul>
-</div>
-</div>
-</div>
-<div class="s-cards">
-<div class="scard sc-green sflip">
-<div class="sf-inner">
-<div class="sf-face sf-front" aria-hidden="false">
-<div class="sc-lab"><span class="sc-num">01</span><span class="sc-dash"></span>Modernize</div>
-<p class="sc-body">The foundation Toyota runs on was never built to move at this speed. The mandate is to modernize decades of legacy systems and reimagine the work through AI at once, not one then the other. But the datacenter and plants cannot pause while it happens, and the work competes for the same engineers who keep today's systems running. Ambition is not the constraint. The hours to do both are.</p>
-<div class="sc-stat">The Dual Mandate</div>
-<div class="sc-cap">modernize and reimagine at once on the same fixed headcount</div>
-<button type="button" class="sf-flip" aria-label="The Dual Mandate: flip for detail" aria-expanded="false"><span class="sf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span></button>
-</div>
-<div class="sf-face sf-back" aria-hidden="true">
-<button type="button" class="sf-unflip" aria-label="Flip back"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></button>
-<div class="sc-lab"><span class="sc-num">01</span><span class="sc-dash"></span>The Dual Mandate</div>
-<p class="sc-body">Toyota's break-even volume has climbed on human capital and future investment, before tariffs. Management's published answer is to <mark class="sf-hl">raise the ratio of value-added work</mark> by putting AI on routine and low-value tasks so people do what only people can do.</p>
-<div class="sf-src"><span class="sf-src-t">Toyota FY2026 Form 20-F · Q3 FY2026 results</span><button type="button" class="sf-info" aria-label="Show source detail" aria-expanded="false" aria-controls="sfp-1"><span aria-hidden="true">i</span></button></div>
-<div class="sf-pop" id="sfp-1" role="note" aria-label="Source detail" hidden>
-<button type="button" class="sf-x" aria-label="Close source detail">×</button>
-<p>Form 20-F, FY ended March 31, 2026, Item 4.B, section "Continuous Improvement in Break-even Volume." States break-even volume has risen on increased human-resource and future-oriented investment plus U.S. tariffs, and commits to stepping up AI use on routine and low-value-added work so personnel focus on tasks only humans can perform, raising the rate of value-added work. Reinforced in the Q3 FY2026 results summary, which defines the metric as the proportion of tasks that increase added value and rules out across-the-board cuts. Supporting: risk factor on securing and retaining talent, and forward-looking factor (xvi), ability to hire or retain sufficient human resources.</p>
-<div class="sf-links"><a href="https://www.sec.gov/Archives/edgar/data/1094517/000119312526264811/d101983d20f.htm" target="_blank" rel="noopener noreferrer">sec.gov/Archives/edgar/data/1094517/000119312526264811/d101983d20f.htm</a><a href="https://www.sec.gov/Archives/edgar/data/1094517/000119312526040201/d13088dex992.htm" target="_blank" rel="noopener noreferrer">sec.gov/Archives/edgar/data/1094517/000119312526040201/d13088dex992.htm</a></div>
-</div>
-</div>
-</div>
-</div>
-<div class="scard sc-blue sflip">
-<div class="sf-inner">
-<div class="sf-face sf-front" aria-hidden="false">
-<div class="sc-lab"><span class="sc-num">02</span><span class="sc-dash"></span>Standardize</div>
-<p class="sc-body">Chofer solved the on-ramp: teams on golden paths, environments on demand, a governed way to reach AI. But it delivers access, not a standard. Teams each reach for the nearest copilot, leaving a fragmented landscape with no common bar for trust. Carrying a large project through its full lifecycle, from plan to validated change, is the harder problem, still unsolved at scale.</p>
-<div class="sc-stat">Playground</div>
-<div class="sc-cap">broad AI access, no common bar for how agents are trusted</div>
-<button type="button" class="sf-flip" aria-label="Playground: flip for detail" aria-expanded="false"><span class="sf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span></button>
-</div>
-<div class="sf-face sf-back" aria-hidden="true">
-<button type="button" class="sf-unflip" aria-label="Flip back"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></button>
-<div class="sc-lab"><span class="sc-num">02</span><span class="sc-dash"></span>Playground</div>
-<p class="sc-body">Toyota has never run a production process without a shared definition of what passes and what stops, because a <mark class="sf-hl">standard is what makes speed safe rather than merely fast</mark>. AI arrived the other way around, team by team, each with its own tool and its own threshold for trust. Access was always the easy half.</p>
-<div class="sf-src"><span class="sf-src-t">Toyota FY2026 Form 20-F · Toyota Production System</span><button type="button" class="sf-info" aria-label="Show source detail" aria-expanded="false" aria-controls="sfp-2"><span aria-hidden="true">i</span></button></div>
-<div class="sf-pop" id="sfp-2" role="note" aria-label="Source detail" hidden>
-<button type="button" class="sf-x" aria-label="Close source detail">×</button>
-<p>Form 20-F, FY ended March 31, 2026, Item 4.B. States TPS is applied to development departments, not only manufacturing, to shorten development time, reduce cost, and develop people. Defines jidoka as stopping equipment immediately when a problem occurs to prevent defective products from being produced. Same filing commits to delivering safe, reliable, high-quality software through digital platforms that form the foundation of software development, plus the Arene software creation platform.</p>
-<div class="sf-links"><a href="https://www.sec.gov/Archives/edgar/data/1094517/000119312526264811/d101983d20f.htm" target="_blank" rel="noopener noreferrer">sec.gov/Archives/edgar/data/1094517/000119312526264811/d101983d20f.htm</a></div>
-</div>
-</div>
-</div>
-</div>
-<div class="scard sc-red sflip">
-<div class="sf-inner">
-<div class="sf-face sf-front" aria-hidden="false">
-<div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Extend</div>
-<p class="sc-body">The Enterprise AI team took a fragmented set of agent projects and put one reviewed architecture underneath them, and delivery went from six engineers and six months to one engineer and four days. But the standard governs how Toyota retrieves what it knows, not how it builds what it ships. Engineering is still funded and staffed project by project, on the same fixed headcount.</p>
-<div class="sc-stat">Half the Line</div>
-<div class="sc-cap">the platform play proven on agents, never run on engineering itself</div>
-<button type="button" class="sf-flip" aria-label="Half the Line: flip for detail" aria-expanded="false"><span class="sf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span></button>
-</div>
-<div class="sf-face sf-back" aria-hidden="true">
-<button type="button" class="sf-unflip" aria-label="Flip back"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></button>
-<div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Half the Line</div>
-<div class="sf-mid"><div class="sf-bstat">Half the Line</div><div class="sf-bcap">the platform play proven on agents, never run on engineering itself</div></div>
-<div class="sf-src"><span class="sf-src-t">Toyota Enterprise AI · LangChain Interrupt 26 · AWS Transform</span><button type="button" class="sf-info" aria-label="Show source detail" aria-expanded="false" aria-controls="sfp-3"><span aria-hidden="true">i</span></button></div>
-<div class="sf-pop" id="sfp-3" role="note" aria-label="Source detail" hidden>
-<button type="button" class="sf-x" aria-label="Close source detail">×</button>
-<p>TMNA's Enterprise AI function was established under Brian Kursar, Group VP and first Head of Enterprise AI, with Melody Ayeli as General Manager. Roughly 35 people set enterprise AI standards and build the highest-priority products, with a six-to-seven-figure annual ROI threshold per project. ToyotaGPT uses dynamic graph generation so an agent's entire architecture comes from a config file; the architecture is security-reviewed once at platform level and every agent inherits it. The tool layer is MCP-compatible, secured by TMNA cybersecurity from day one, and access is permission-gated to the underlying data. Results published to date sit in knowledge work: GearPal cut machine diagnosis from five or six hours to two or three minutes across 15 production lines; R&amp;D GPT compressed paint research timelines from roughly three years to one. The one published case of AI producing software is mainframe modernization with AWS — 400 COBOL programs and 375,000 lines documented in five hours, 1,500 hours of manual documentation saved — against a mainframe that still carries 90% of the supply chain. That work is bounded reverse-engineering, not sustained engineering capacity.</p>
-<div class="sf-links"><a href="https://www.langchain.com/blog/how-toyota-north-america-put-enterprise-ai-on-the-balance-sheet-with-deep-agents-and-langsmith" target="_blank" rel="noopener noreferrer">langchain.com/blog/how-toyota-north-america-put-enterprise-ai-on-the-balance-sheet-with-deep-agents-and-langsmith</a><a href="https://aws.amazon.com/solutions/case-studies/toyota-transform-case-study" target="_blank" rel="noopener noreferrer">aws.amazon.com/solutions/case-studies/toyota-transform-case-study</a><a href="https://pressroom.toyota.com/biographies/brian-kursar" target="_blank" rel="noopener noreferrer">pressroom.toyota.com/biographies/brian-kursar</a></div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -1199,26 +1094,6 @@ $$('.nflip').forEach(c=>{const front=c.querySelector('.nf-front'),back=c.querySe
     c.setAttribute('aria-pressed',f?'true':'false');
     front.setAttribute('aria-hidden',f?'true':'false');
     back.setAttribute('aria-hidden',f?'false':'true');});});
-// state chapter: flippable stat cards with source popouts
-$$('.sflip').forEach(card=>{const flip=card.querySelector('.sf-flip'),
-    front=card.querySelector('.sf-front'),back=card.querySelector('.sf-back'),
-    unflip=card.querySelector('.sf-unflip'),info=card.querySelector('.sf-info'),
-    pop=card.querySelector('.sf-pop'),close=card.querySelector('.sf-x');
-  const setPop=o=>{pop.hidden=!o;info.setAttribute('aria-expanded',o?'true':'false');};
-  const setFlip=f=>{card.classList.toggle('flipped',f);
-    flip.setAttribute('aria-expanded',f?'true':'false');
-    front.setAttribute('aria-hidden',f?'true':'false');
-    back.setAttribute('aria-hidden',f?'false':'true');
-    if(!f&&!pop.hidden)setPop(false);};
-  flip.addEventListener('click',()=>setFlip(true));
-  unflip.addEventListener('click',()=>setFlip(false));
-  back.addEventListener('click',e=>{
-    if(e.target.closest('.sf-pop,.sf-info,.sf-unflip,button,a'))return;
-    setFlip(false);});
-  info.addEventListener('click',e=>{e.stopPropagation();setPop(pop.hidden);});
-  close.addEventListener('click',e=>{e.stopPropagation();setPop(false);info.focus();});
-  card.addEventListener('keydown',e=>{
-    if(e.key==='Escape'&&!pop.hidden){e.preventDefault();setPop(false);info.focus();}});});
 document.addEventListener('keydown',e=>{
   if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;
   const ae=document.activeElement;
