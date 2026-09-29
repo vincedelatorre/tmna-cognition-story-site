@@ -130,7 +130,7 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 .sf-x:hover{background:#e7e3d8;color:var(--ink)}
 .sf-links{margin-top:10px;display:flex;flex-direction:column;gap:6px}
 .sf-links a{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;line-height:1.5;color:var(--accent);word-break:break-all}
-@media(prefers-reduced-motion:reduce){.sf-inner{transition:none}}
+@media(prefers-reduced-motion:reduce){.sf-inner{transition:none}.nf-inner{transition:none}}
 .sc-green{--sc:#1f9d55}.sc-blue{--sc:#2f4bff}.sc-red{--sc:#eb0a1e}
 .sc-lab{display:flex;align-items:center;gap:10px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted)}
 .sc-num{color:var(--sc);font-weight:700}
@@ -198,7 +198,7 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 @media(max-width:720px){.sidebar{transform:translateX(-100%);width:256px;transition:transform .2s}.sidebar.open{transform:translateX(0);box-shadow:0 0 0 100vmax #0b102066}.workspace{margin-left:0}.menu-toggle{display:flex;position:fixed;top:10px;left:10px;z-index:40;padding:7px 10px;font-size:14px;background:var(--paper);box-shadow:0 1px 6px #0b102022}.page{padding:56px 16px 22px}h2{font-size:29px;letter-spacing:-.8px}.sub{font-size:16px}.metrics{grid-template-columns:1fr 1fr}.metric{padding:16px}.metric .value{font-size:25px}.card{padding:20px}.ide-pop{width:min(290px,calc(100vw - 32px))}.cmp-dl{display:none}.cmp-left{flex-wrap:wrap;row-gap:6px}.footnote{display:block;font-size:9px;padding:15px 16px 22px}.footnote span{display:block;margin-bottom:5px}.bottom-nav small{display:none}}
 @media(max-width:480px){.mp-stats{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
-@media print{@page{size:A4;margin:14mm}body{background:white}.sidebar,.bottom-nav,.menu-toggle,dialog,.skip{display:none!important}.workspace{margin:0}.page{padding:0;max-width:none}.panel,.panel[hidden]{display:block!important;animation:none;break-before:page}.acc-panel{grid-template-rows:1fr;visibility:visible}.ide-pop{display:none!important}.panel:first-child{break-before:auto}h2{font-size:24px}.metrics{grid-template-columns:repeat(5,1fr)}.metric{padding:10px}.metric .value{font-size:18px}.card,.chip{box-shadow:none;break-inside:avoid}.footnote{display:block;font-size:8.5px}body[data-theme="dark"]{background:white}body[data-theme="dark"] h2,body[data-theme="dark"] .ch-sub{color:var(--ink)}body[data-theme="dark"] .eyebrow{color:var(--accent)}body[data-theme="dark"] .nsc{background:#fff;border-color:var(--line);box-shadow:none}body[data-theme="dark"] .nsc .sc-lab,body[data-theme="dark"] .ns-own,body[data-theme="dark"] .ns-body,body[data-theme="dark"] .ns-t{color:var(--muted)}body[data-theme="dark"] .ns-foot{border-top-color:var(--line)}}
+@media print{@page{size:A4;margin:14mm}body{background:white}.sidebar,.bottom-nav,.menu-toggle,dialog,.skip{display:none!important}.workspace{margin:0}.page{padding:0;max-width:none}.panel,.panel[hidden]{display:block!important;animation:none;break-before:page}.acc-panel{grid-template-rows:1fr;visibility:visible}.ide-pop{display:none!important}.panel:first-child{break-before:auto}h2{font-size:24px}.metrics{grid-template-columns:repeat(5,1fr)}.metric{padding:10px}.metric .value{font-size:18px}.card,.chip{box-shadow:none;break-inside:avoid}.footnote{display:block;font-size:8.5px}body[data-theme="dark"]{background:white}body[data-theme="dark"] h2,body[data-theme="dark"] .ch-sub{color:var(--ink)}body[data-theme="dark"] .eyebrow{color:var(--accent)}body[data-theme="dark"] .nf-front{background:#fff;border-color:var(--line);box-shadow:none}body[data-theme="dark"] .nf-front .sc-lab,body[data-theme="dark"] .ns-own{color:var(--muted)}body[data-theme="dark"] .ns-body{color:var(--ink)}body[data-theme="dark"] .nf-ic{background:rgba(11,16,32,.08);color:var(--muted)}}
 /* chapter 05 "Next Steps" — dark stat-card family (styled like .s-cards, on navy) */
 .cog-row{display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:32px;margin:18px 0;align-items:center}
 .cog-chart{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px 8px}
@@ -207,17 +207,34 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 .cog-legend i{width:8px;height:8px;border-radius:2px;display:inline-block;margin-right:5px}
 @media(max-width:980px){.cog-row{grid-template-columns:1fr}.cog-row-l:empty{display:none}.cog-chart{max-width:520px}}
 .ns-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px;align-items:stretch}
-.nsc{position:relative;display:flex;flex-direction:column;min-width:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 24px 22px;overflow:hidden}
-.nsc:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sc),color-mix(in srgb,var(--sc) 30%,#fff))}
-.nsc .sc-lab{color:rgba(255,255,255,.7)}
+.nsc{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;min-width:0;border-radius:14px;position:relative;height:410px}
+@media(max-width:1400px){.nsc{height:475px}}
+@media(max-width:1300px){.nsc{height:520px}}
+@media(max-width:1100px){.nsc{height:630px}}
+.nsc:focus-visible{outline:2px solid var(--accent-dim);outline-offset:3px}
+.nf-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.nsc.flipped .nf-inner{transform:rotateY(180deg)}
+.nf-face{position:absolute;inset:0;border-radius:14px;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;flex-direction:column;padding:24px 24px 22px}
+.nf-face::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sc),color-mix(in srgb,var(--sc) 30%,#fff))}
+.nf-front{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding-bottom:52px}
+.nf-front .sc-lab{color:rgba(255,255,255,.7)}
+.nf-back{transform:rotateY(180deg);background:var(--paper);border:1px solid var(--line);color:var(--ink)}
+.nf-back .sc-lab{color:var(--muted)}
+.nf-ic{position:absolute;right:12px;bottom:12px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.12);color:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center}
+.nf-un{position:absolute;top:12px;right:12px;width:28px;height:28px;border-radius:50%;background:rgba(11,16,32,.06);color:var(--muted);display:flex;align-items:center;justify-content:center}
+.nf-ic svg,.nf-un svg{width:13px;height:13px;display:block}
+.nf-mid{flex:1;display:flex;flex-direction:column;justify-content:center}
 .ns-own{margin-top:14px;font-size:12.5px;font-weight:600;line-height:1.45;color:rgba(255,255,255,.72)}
 .ns-own b{color:var(--sc);font-weight:600}
-.ns-body{font-size:14px;line-height:1.6;color:rgba(255,255,255,.85);margin:12px 0 18px;text-wrap:pretty}
-.ns-foot{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.12)}
-.ns-k{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;color:var(--sc)}
-.ns-t{font-size:12.5px;line-height:1.5;color:rgba(255,255,255,.7);margin:5px 0 0}
-.ns-t+.ns-k{margin-top:13px}
-@media(max-width:980px){.ns-cards{grid-template-columns:1fr}}
+.ns-body{font-size:14px;line-height:1.6;color:rgba(255,255,255,.85);margin:12px 0 0;text-wrap:pretty}
+.ns-k{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;color:var(--sc)}
+.ns-t{font-size:15px;line-height:1.5;color:rgba(11,16,32,.82);margin:6px 0 0}
+.ns-t+.ns-k{margin-top:18px}
+@media(max-width:980px){.ns-cards{grid-template-columns:1fr}.nsc{height:335px}}
+@media(max-width:720px){.nsc{height:310px}}
+@media(max-width:560px){.nsc{height:330px}}
+@media(max-width:480px){.nsc{height:365px}}
+@media(max-width:420px){.nsc{height:480px}}
 /* inverted theme for the Next Steps chapter (body[data-theme="dark"], toggled in foot.html) */
 body{transition:background-color .2s ease}
 .sidebar,.menu-toggle,.bottom-nav,.footnote{transition:background-color .2s ease,color .2s ease,border-color .2s ease}
@@ -1010,24 +1027,51 @@ render();measure();start();
 <h2 class="h2-one">Three doors into the same program</h2>
 <p class="ch-sub">Ninety days, three owners, one agent team carrying the volume in all three.</p>
 <div class="ns-cards">
-<article class="nsc" style="--sc:#1f9d55">
+<button type="button" class="nsc nflip" style="--sc:#1f9d55" aria-pressed="false" aria-label="Clear the backlog: flip for proof and measure">
+<div class="nf-inner">
+<div class="nf-face nf-front">
 <div class="sc-lab"><span class="sc-num">01</span><span class="sc-dash"></span>Clear the backlog</div>
 <div class="ns-own"><b>Owner:</b> Kishore Jonnalagedda · with Scott Holdt and AWS</div>
 <p class="ns-body">The modernization work that's been priced at years and millions and funded at zero. Devin reads what nobody has read in a decade, writes the tests that were never written, then refactors — two systems, in parallel, each agent in its own environment inside your VPC. Your engineers set direction and sign off. Alongside it, with AWS, sort the estate into what moves, what gets containerized in place, and what gets retired.</p>
-<div class="ns-foot"><div class="ns-k">Proof</div><p class="ns-t">Mercedes-Benz, 200,000+ lines of COBOL, an eight-month estimate delivered in eight days.</p><div class="ns-k">Measure</div><p class="ns-t">the re-baselined estimate against the original price tag. That number is the business case.</p></div>
-</article>
-<article class="nsc" style="--sc:#2f4bff">
+<span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
+</div>
+<div class="nf-face nf-back" aria-hidden="true">
+<div class="sc-lab"><span class="sc-num">01</span><span class="sc-dash"></span>Clear the backlog</div>
+<div class="nf-mid"><div class="ns-k">Proof</div><p class="ns-t">Mercedes-Benz, 200,000+ lines of COBOL, an eight-month estimate delivered in eight days.</p><div class="ns-k">Measure</div><p class="ns-t">the re-baselined estimate against the original price tag. That number is the business case.</p></div>
+<span class="nf-un" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
+</div>
+</div>
+</button>
+<button type="button" class="nsc nflip" style="--sc:#2f4bff" aria-pressed="false" aria-label="Replatform the plant estate: flip for proof and measure">
+<div class="nf-inner">
+<div class="nf-face nf-front">
 <div class="sc-lab"><span class="sc-num">02</span><span class="sc-dash"></span>Replatform the plant estate</div>
 <div class="ns-own"><b>Owner:</b> Scott Holdt · Devin does the application half</div>
 <p class="ns-body">Move the on-prem estate off the traditional hypervisor onto a managed Kubernetes plane, one plant as the reference. The platform is the easy half. The hard half is the several hundred applications that assume a VM underneath them, and that's the agent team's work: containerize, externalize state and config, convert deployment scripts into manifests and charts, wire the pipelines, then keep all of it current as the fleet grows from one plant to twelve.</p>
-<div class="ns-foot"><div class="ns-k">Measure</div><p class="ns-t">apps replatformed per week, time to stand up cluster number two, licensing cost avoided, plant uptime unchanged.</p></div>
-</article>
-<article class="nsc" style="--sc:#eb0a1e">
+<span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
+</div>
+<div class="nf-face nf-back" aria-hidden="true">
+<div class="sc-lab"><span class="sc-num">02</span><span class="sc-dash"></span>Replatform the plant estate</div>
+<div class="nf-mid"><div class="ns-k">Measure</div><p class="ns-t">apps replatformed per week, time to stand up cluster number two, licensing cost avoided, plant uptime unchanged.</p></div>
+<span class="nf-un" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
+</div>
+</div>
+</button>
+<button type="button" class="nsc nflip" style="--sc:#eb0a1e" aria-pressed="false" aria-label="Shift SIL left: flip for proof and measure">
+<div class="nf-inner">
+<div class="nf-face nf-front">
 <div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Shift SIL left</div>
 <div class="ns-own"><b>Owner:</b> Kishore, vehicle software · Devin writes and maintains the coverage</div>
 <p class="ns-body">The same defect costs minutes in software and a full bench slot on hardware, and the queue behind it pays the difference. Take one ECU domain. Devin converts the existing HIL suite into its SIL equivalent, then owns the maintenance as the code moves — the part that always decays when humans do it by hand. Standardize what worked at RV Tech.</p>
-<div class="ns-foot"><div class="ns-k">Proof</div><p class="ns-t">RV Tech (Rivian and VW), test writing 10 to 15x faster, three to four engineers back on product work.</p><div class="ns-k">Measure</div><p class="ns-t">bench hours released, share of cases running pre-bench, commit-to-result time.</p></div>
-</article>
+<span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
+</div>
+<div class="nf-face nf-back" aria-hidden="true">
+<div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Shift SIL left</div>
+<div class="nf-mid"><div class="ns-k">Proof</div><p class="ns-t">RV Tech (Rivian and VW), test writing 10 to 15x faster, three to four engineers back on product work.</p><div class="ns-k">Measure</div><p class="ns-t">bench hours released, share of cases running pre-bench, commit-to-result time.</p></div>
+<span class="nf-un" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
+</div>
+</div>
+</button>
 </div>
 </section>
 <nav class="bottom-nav" id="bottomNav" aria-label="Previous and next chapter"><button class="btn" id="prevBtn">← Previous</button><small id="stepLabel"></small><button class="btn" id="nextBtn">Next →</button></nav>
@@ -1082,6 +1126,13 @@ if(slc){const btn=slc.querySelector('.sl-next'),slides=[...slc.querySelectorAll(
     slides.forEach((s,j)=>s.setAttribute('aria-hidden',j===i?'false':'true'));});}}
 // challenge chapter: flippable customer cards (click/Enter/Space on the button)
 $$('.cust').forEach(c=>{const [front,back]=c.querySelectorAll('.cust-face');
+  c.addEventListener('click',()=>{
+    const f=c.classList.toggle('flipped');
+    c.setAttribute('aria-pressed',f?'true':'false');
+    front.setAttribute('aria-hidden',f?'true':'false');
+    back.setAttribute('aria-hidden',f?'false':'true');});});
+// next-steps chapter: flippable use-case cards (click/Enter/Space on the button)
+$$('.nflip').forEach(c=>{const front=c.querySelector('.nf-front'),back=c.querySelector('.nf-back');
   c.addEventListener('click',()=>{
     const f=c.classList.toggle('flipped');
     c.setAttribute('aria-pressed',f?'true':'false');
