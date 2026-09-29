@@ -215,16 +215,13 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 @media(max-width:980px){.cog-row{grid-template-columns:1fr}.cog-prods{height:auto}.cog-chart{max-width:520px}}
 @media(max-width:480px){.cprod{font-size:15px;padding:12px 13px;letter-spacing:-.2px}}
 .ns-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px;align-items:stretch}
-.nsc{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;min-width:0;border-radius:14px;position:relative;height:410px}
-@media(max-width:1400px){.nsc{height:475px}}
-@media(max-width:1300px){.nsc{height:520px}}
-@media(max-width:1100px){.nsc{height:630px}}
+.nsc{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;min-width:0;border-radius:14px;position:relative}
 .nsc:focus-visible{outline:2px solid var(--accent-dim);outline-offset:3px}
 .nf-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
 .nsc.flipped .nf-inner{transform:rotateY(180deg)}
 .nf-face{position:absolute;inset:0;border-radius:14px;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;flex-direction:column;padding:24px 24px 22px}
 .nf-face::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sc),color-mix(in srgb,var(--sc) 30%,#fff))}
-.nf-front{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding-bottom:52px}
+.nf-front{position:relative;min-height:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding-bottom:52px}
 .nf-front .sc-lab{color:rgba(255,255,255,.7)}
 .nf-back{transform:rotateY(180deg);background:var(--paper);border:1px solid var(--line);color:var(--ink)}
 .nf-back .sc-lab{color:var(--muted)}
@@ -238,11 +235,7 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 .ns-k{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;color:var(--sc)}
 .ns-t{font-size:15px;line-height:1.5;color:rgba(11,16,32,.82);margin:6px 0 0}
 .ns-t+.ns-k{margin-top:18px}
-@media(max-width:980px){.ns-cards{grid-template-columns:1fr}.nsc{height:335px}}
-@media(max-width:720px){.nsc{height:310px}}
-@media(max-width:560px){.nsc{height:330px}}
-@media(max-width:480px){.nsc{height:365px}}
-@media(max-width:420px){.nsc{height:480px}}
+@media(max-width:980px){.ns-cards{grid-template-columns:1fr}}
 /* chapter 06 "Customers" — public logo wall (grey tiles like the reference image) */
 .wall{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin-top:28px}
 .wtile{display:flex;align-items:center;justify-content:center;background:#ececeb;border-radius:6px;margin:0;aspect-ratio:2/1;padding:12px}
@@ -1078,16 +1071,16 @@ render();measure();start();
 </div>
 </div>
 </button>
-<button type="button" class="nsc nflip" style="--sc:#eb0a1e" aria-pressed="false" aria-label="Shift SIL left: flip for proof and measure">
+<button type="button" class="nsc nflip" style="--sc:#eb0a1e" aria-pressed="false" aria-label="Run the play on engineering: flip for proof and measure">
 <div class="nf-inner">
 <div class="nf-face nf-front">
-<div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Shift SIL left</div>
-<div class="ns-own"><b>Owner:</b> Kishore, vehicle software · Devin writes and maintains the coverage</div>
-<p class="ns-body">The same defect costs minutes in software and a full bench slot on hardware, and the queue behind it pays the difference. Take one ECU domain. Devin converts the existing HIL suite into its SIL equivalent, then owns the maintenance as the code moves — the part that always decays when humans do it by hand. Standardize what worked at RV Tech.</p>
+<div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Run the play on engineering</div>
+<div class="ns-own"><b>Owner:</b> Brian Kursar · with Kishore on Chofer · Devin does the work</div>
+<p class="ns-body">Write the engineering standard the way Enterprise AI wrote the agent one. Define how an agent works inside a repo, what it can touch, where it stops and who signs off. Security reviews it once at the platform level, then every team inherits it instead of negotiating it. Run it first on the mainframe follow-on, where AWS documented 400 programs and nobody has touched the code: Devin writes the tests, then the refactor, under the new standard. Score it against the same ROI threshold every Enterprise AI project already clears.</p>
 <span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
 <div class="nf-face nf-back" aria-hidden="true">
-<div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Shift SIL left</div>
+<div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Run the play on engineering</div>
 <div class="nf-mid"><div class="ns-k">Proof</div><p class="ns-t">RV Tech (Rivian and VW), test writing 10 to 15x faster, three to four engineers back on product work.</p><div class="ns-k">Measure</div><p class="ns-t">bench hours released, share of cases running pre-bench, commit-to-result time.</p></div>
 <span class="nf-un" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
