@@ -179,24 +179,28 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 .ns-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px;align-items:stretch}
 .nsc{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;min-width:0;border-radius:14px;position:relative}
 .nsc:focus-visible{outline:2px solid var(--accent-dim);outline-offset:3px}
-.nf-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.nf-inner{position:relative;width:100%;height:100%;display:grid;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
 .nsc.flipped .nf-inner{transform:rotateY(180deg)}
-.nf-face{position:absolute;inset:0;border-radius:14px;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;flex-direction:column;padding:24px 24px 22px}
+.nf-face{position:relative;grid-area:1/1;border-radius:14px;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;display:flex;flex-direction:column;padding:24px 24px 22px}
 .nf-face::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sc),color-mix(in srgb,var(--sc) 30%,#fff))}
-.nf-front{position:relative;min-height:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding-bottom:52px}
+.nf-front{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding-bottom:52px}
 .nf-front .sc-lab{color:rgba(255,255,255,.7)}
 .nf-back{transform:rotateY(180deg);background:var(--paper);border:1px solid var(--line);color:var(--ink)}
-.nf-back .sc-lab{color:var(--muted)}
+.nf-back .sc-lab{color:var(--muted);padding-right:36px}
 .nf-ic{position:absolute;right:12px;bottom:12px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.12);color:rgba(255,255,255,.8);display:flex;align-items:center;justify-content:center}
 .nf-un{position:absolute;top:12px;right:12px;width:28px;height:28px;border-radius:50%;background:rgba(11,16,32,.06);color:var(--muted);display:flex;align-items:center;justify-content:center}
 .nf-ic svg,.nf-un svg{width:13px;height:13px;display:block}
-.nf-mid{flex:1;display:flex;flex-direction:column;justify-content:center}
 .ns-own{margin-top:14px;font-size:12.5px;font-weight:600;line-height:1.45;color:rgba(255,255,255,.72)}
 .ns-own b{color:var(--sc);font-weight:600}
 .ns-body{font-size:14px;line-height:1.6;color:rgba(255,255,255,.85);margin:12px 0 0;text-wrap:pretty}
+.ns-tl{margin-top:auto;padding-top:18px;min-height:126px}
 .ns-k{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;color:var(--sc)}
+.nf-front .ns-t{font-size:14px;line-height:1.5;color:rgba(255,255,255,.85);margin:6px 0 0}
 .ns-t{font-size:15px;line-height:1.5;color:rgba(11,16,32,.82);margin:6px 0 0}
-.ns-t+.ns-k{margin-top:18px}
+.ns-src{margin-top:12px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+.ns-det{font-size:13px;line-height:1.55;color:var(--ink);margin:12px 0 0;text-wrap:pretty}
+.ns-links{margin-top:auto;padding-top:14px;display:flex;flex-wrap:wrap;gap:6px 14px}
+.ns-links a{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;letter-spacing:.02em;color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 40%,transparent)}
 @media(max-width:980px){.ns-cards{grid-template-columns:1fr}}
 /* chapter 06 "Customers" — public logo wall (grey tiles like the reference image) */
 .cog-top{display:grid;grid-template-columns:repeat(3,minmax(0,168px)) minmax(0,1fr);gap:12px;align-items:stretch;margin-top:12px}
@@ -810,47 +814,56 @@ window.addEventListener('resize',()=>{if(pop.classList.contains('show')){placePo
 <h2 class="h2-one">Three doors into the same program</h2>
 <p class="ch-sub">Ninety days, three owners, one agent team carrying the volume in all three.</p>
 <div class="ns-cards">
-<button type="button" class="nsc nflip" style="--sc:#1f9d55" aria-pressed="false" aria-label="Clear the backlog: flip for proof and measure">
+<button type="button" class="nsc nflip" style="--sc:#1f9d55" aria-pressed="false" aria-label="Application modernization: flip for source">
 <div class="nf-inner">
 <div class="nf-face nf-front">
-<div class="sc-lab"><span class="sc-num">01</span><span class="sc-dash"></span>Clear the backlog</div>
-<div class="ns-own"><b>Owner:</b> Kishore Jonnalagedda · with Scott Holdt and AWS</div>
-<p class="ns-body">The modernization work that's been priced at years and millions and funded at zero. Devin reads what nobody has read in a decade, writes the tests that were never written, then refactors — two systems, in parallel, each agent in its own environment inside your VPC. Your engineers set direction and sign off. Alongside it, with AWS, sort the estate into what moves, what gets containerized in place, and what gets retired.</p>
+<div class="sc-lab"><span class="sc-num">01</span><span class="sc-dash"></span>Application modernization</div>
+<div class="ns-own"><b>Owner:</b> Kishore Jonnalagedda</div>
+<p class="ns-body">Target: the 1,300 apps still off Chofer, starting with the ones nobody has documented. Next step: point Devin at a first wave of 50 apps to generate the missing documentation and a Blueprint v2 migration PR for each, reviewed by Kishore's team, then package the working recipe as a playbook that runs across the rest of the estate.</p>
+<div class="ns-tl"><div class="ns-k">Timeline</div><p class="ns-t">30-day pilot on the first 50; playbook running fleet-wide by day 90, with low-risk changes auto-merging.</p></div>
 <span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
 <div class="nf-face nf-back" aria-hidden="true">
-<div class="sc-lab"><span class="sc-num">01</span><span class="sc-dash"></span>Clear the backlog</div>
-<div class="nf-mid"><div class="ns-k">Proof</div><p class="ns-t">Mercedes-Benz, 200,000+ lines of COBOL, an eight-month estimate delivered in eight days.</p><div class="ns-k">Measure</div><p class="ns-t">the re-baselined estimate against the original price tag. That number is the business case.</p></div>
+<div class="sc-lab"><span class="sc-num">01</span><span class="sc-dash"></span>Application modernization</div>
+<div class="ns-src">FE fundinfo · Evinova</div>
+<p class="ns-det">FE fundinfo runs Devin playbooks across ~1,800 repositories through an automation layer that finds repos needing updates, starts sessions, tracks progress, and auto-merges low-risk PRs such as documentation; 10% immediate capacity gain. Evinova generated regulatory documentation directly from source at ~90% accuracy, cutting 35–40 hours to under 5, and migrated three legacy components in about a day and a half where one had previously taken five days. Timeline gauge: documentation is the fastest win; the 90-day fleet-wide figure assumes the Blueprint v2 recipe stabilizes during the pilot.</p>
+<div class="ns-links"><a href="https://devin.ai/customers/fefundinfo" target="_blank" rel="noopener noreferrer">devin.ai/customers/fefundinfo</a><a href="https://devin.ai/customers/evinova" target="_blank" rel="noopener noreferrer">devin.ai/customers/evinova</a></div>
 <span class="nf-un" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
 </div>
 </button>
-<button type="button" class="nsc nflip" style="--sc:#2f4bff" aria-pressed="false" aria-label="Replatform the plant estate: flip for proof and measure">
+<button type="button" class="nsc nflip" style="--sc:#2f4bff" aria-pressed="false" aria-label="Monolith-to-microservices decomposition: flip for source">
 <div class="nf-inner">
 <div class="nf-face nf-front">
-<div class="sc-lab"><span class="sc-num">02</span><span class="sc-dash"></span>Replatform the plant estate</div>
-<div class="ns-own"><b>Owner:</b> Scott Holdt · Devin does the application half</div>
-<p class="ns-body">Move the on-prem estate off the traditional hypervisor onto a managed Kubernetes plane, one plant as the reference. The platform is the easy half. The hard half is the several hundred applications that assume a VM underneath them, and that's the agent team's work: containerize, externalize state and config, convert deployment scripts into manifests and charts, wire the pipelines, then keep all of it current as the fleet grows from one plant to twelve.</p>
+<div class="sc-lab"><span class="sc-num">02</span><span class="sc-dash"></span>Monolith-to-microservices decomposition</div>
+<div class="ns-own"><b>Owner:</b> Brian Kursar</div>
+<p class="ns-body">Target: 100,000+ scheduled ETL scripts and the 12,000-line Terraform Blueprints copied three times over. Next step: take one business unit's ETL estate, have Devin map dependencies and migrate the first 100 scripts into the target module structure while collapsing the three Terraform copies into one shared module, so the per-script pattern is proven before it scales.</p>
+<div class="ns-tl"><div class="ns-k">Timeline</div><p class="ns-t">6-week pilot; first business unit complete inside a quarter; full estate sized from pilot throughput, with 12 months as the working target.</p></div>
 <span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
 <div class="nf-face nf-back" aria-hidden="true">
-<div class="sc-lab"><span class="sc-num">02</span><span class="sc-dash"></span>Replatform the plant estate</div>
-<div class="nf-mid"><div class="ns-k">Measure</div><p class="ns-t">apps replatformed per week, time to stand up cluster number two, licensing cost avoided, plant uptime unchanged.</p></div>
+<div class="sc-lab"><span class="sc-num">02</span><span class="sc-dash"></span>Monolith-to-microservices decomposition</div>
+<div class="ns-src">Nubank</div>
+<p class="ns-det">Nubank's core ETL was an 8-year-old monolith of 6M+ lines; the manual plan was ~100,000 data-class migrations spread across 1,000+ engineers over 18 months. With Devin, per-task time fell from ~40 minutes to ~10 after fine-tuning, engineering-hour efficiency improved 8–12x, cost fell 20x, and business units such as Data, Collections, and Risk completed their migrations in weeks rather than months or years. Timeline gauge: TMNA's script count matches Nubank's task count almost one-for-one; 12 months assumes a BU-by-BU rollout at Nubank's pace.</p>
+<div class="ns-links"><a href="https://devin.ai/customers/nubank" target="_blank" rel="noopener noreferrer">devin.ai/customers/nubank</a></div>
 <span class="nf-un" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
 </div>
 </button>
-<button type="button" class="nsc nflip" style="--sc:#eb0a1e" aria-pressed="false" aria-label="Run the play on engineering: flip for proof and measure">
+<button type="button" class="nsc nflip" style="--sc:#eb0a1e" aria-pressed="false" aria-label="Legacy code refactor & migration: flip for source">
 <div class="nf-inner">
 <div class="nf-face nf-front">
-<div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Run the play on engineering</div>
-<div class="ns-own"><b>Owner:</b> Brian Kursar · with Kishore on Chofer · Devin does the work</div>
-<p class="ns-body">Write the engineering standard the way Enterprise AI wrote the agent one. Define how an agent works inside a repo, what it can touch, where it stops and who signs off. Security reviews it once at the platform level, then every team inherits it instead of negotiating it. Run it first on the mainframe follow-on, where AWS documented 400 programs and nobody has touched the code: Devin writes the tests, then the refactor, under the new standard. Score it against the same ROI threshold every Enterprise AI project already clears.</p>
+<div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Legacy code refactor &amp; migration</div>
+<div class="ns-own"><b>Owner:</b> Scott Holdt</div>
+<p class="ns-body">Target: the 40M-line COBOL→Java output scored 3.44/5 with no tests, and the 1979 mainframe still carrying 90% of supply chain. Next step: don't re-translate; take one supply-chain module and have Devin generate characterization tests from the COBOL behavior, run them against the Java, and fix what fails, lifting quality and coverage in the same pass.</p>
+<div class="ns-tl"><div class="ns-k">Timeline</div><p class="ns-t">4-week pilot on one module; pilot results set the phased plan, with 18–24 months as the working gauge for the program.</p></div>
 <span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
 <div class="nf-face nf-back" aria-hidden="true">
-<div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Run the play on engineering</div>
-<div class="nf-mid"><div class="ns-k">Proof</div><p class="ns-t">RV Tech (Rivian and VW), test writing 10 to 15x faster, three to four engineers back on product work.</p><div class="ns-k">Measure</div><p class="ns-t">bench hours released, share of cases running pre-bench, commit-to-result time.</p></div>
+<div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Legacy code refactor &amp; migration</div>
+<div class="ns-src">Mercedes-Benz · Comarch</div>
+<p class="ns-det">In a four-week pilot, Devin analyzed 200,000+ lines of Mercedes-Benz COBOL and took modernization from an estimated eight months to eight days, ahead of a global rollout across R&amp;D and IT. Comarch is rebuilding a 10M-line, 20-year-old Clarion ERP; the plan compressed from five years to 18 months, with Devin extracting business logic for analysts to validate, and automated test coverage rising from 60% to nearly 100% with Devin writing and maintaining the tests. Timeline gauge: TMNA's estate is ~4x Comarch's, so 18–24 months assumes parallel module streams; the four-week pilot mirrors Mercedes.</p>
+<div class="ns-links"><a href="https://cognition.com/blog/mercedes-benz-cognition" target="_blank" rel="noopener noreferrer">cognition.com/blog/mercedes-benz-cognition</a><a href="https://devin.ai/customers/comarch" target="_blank" rel="noopener noreferrer">devin.ai/customers/comarch</a></div>
 <span class="nf-un" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
 </div>
