@@ -38,28 +38,28 @@ body[data-accent="red"]{--accent:#eb0a1e;--accent-dim:#ff6b76}
 @media(prefers-reduced-motion:reduce){.cust-inner,.psc-inner{transition:none}}
 /* challenge: product surfaces + use cases (adapted from a user-supplied reference) */
 .ps-h{font-family:Georgia,'Times New Roman',serif;font-size:20px;font-weight:600;letter-spacing:-.3px;color:var(--ink);margin-top:28px}
-.ps-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:14px}
-.psc{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;position:relative;min-height:128px;min-width:0}
+.ps-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
+.psc{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;position:relative;min-height:110px;min-width:0}
 .psc-wide{grid-column:span 2}
 .psc-inner{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
 .psc.flipped .psc-inner{transform:rotateY(180deg)}
-.psc-face{position:absolute;inset:0;border-radius:14px;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;padding:16px 18px;display:flex;flex-direction:column}
-.psc-face::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sc),color-mix(in srgb,var(--sc) 30%,#fff))}
+.psc-face{position:absolute;inset:0;border-radius:14px;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;padding:14px 16px;display:flex;flex-direction:column}
 .psc-front{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
-.psc-name{font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:600;letter-spacing:-.4px;color:var(--ink);margin-top:10px;line-height:1.15}
-.psc-back{transform:rotateY(180deg);background:var(--nav);border:1px solid rgba(255,255,255,.08);justify-content:center}
-.psc-back .sc-lab{color:rgba(255,255,255,.7)}
-.psc-desc{color:rgba(255,255,255,.92);font-size:14px;line-height:1.55;margin:10px 0 0}
+.psc-name{font-family:Georgia,'Times New Roman',serif;font-size:19px;font-weight:600;letter-spacing:-.4px;color:var(--ink);margin-top:6px;line-height:1.15}
+.psc-back{transform:rotateY(180deg);background:#fdfcfa;border:1px solid var(--line);justify-content:center}
+.psc-back .sc-lab{color:var(--muted)}
+.psc-desc{color:var(--ink);font-size:14px;line-height:1.55;margin:10px 0 0}
 .psc-use{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:10px}
-.psc-use-l{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-right:2px}
-.psc-chip{border:1px solid rgba(255,255,255,.25);border-radius:6px;padding:3px 8px;font-size:11px;color:rgba(255,255,255,.85);line-height:1.3}
-.psc-more{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:rgba(255,255,255,.6)}
-.uc{--sc:var(--accent);margin-top:16px}
-.uc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:14px}
-.uc-card{background:#fdfcfa;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:16px 18px;font-size:15px;font-weight:600;color:var(--ink)}
+.psc-use-l{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-right:2px}
+.psc-chip{border:1px solid var(--line);border-radius:6px;padding:3px 8px;font-size:11px;color:var(--ink);line-height:1.3}
+.psc-more{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+.ps .sc-dash,.uc .sc-dash{background:var(--muted)}
+.uc{margin-top:10px}
+.uc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:8px}
+.uc-card{background:#fdfcfa;border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:15px;font-weight:600;color:var(--ink)}
 @media(min-width:1181px){.ps-grid .psc:nth-child(1){grid-column:1;grid-row:1}.ps-grid .psc:nth-child(2){grid-column:1;grid-row:2}.ps-grid .psc:nth-child(3){grid-column:2/span 2;grid-row:1}.ps-grid .psc:nth-child(4){grid-column:2;grid-row:2}.ps-grid .psc:nth-child(5){grid-column:3;grid-row:2}.ps-grid .psc:nth-child(6){grid-column:4;grid-row:1}.ps-grid .psc:nth-child(7){grid-column:4;grid-row:2}}
 @media(max-width:1180px){.ps-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ps-grid .psc{grid-column:auto;grid-row:auto}.ps-grid .psc:nth-child(3){grid-column:span 2}.uc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:640px){.ps-grid{grid-template-columns:minmax(0,1fr)}.ps-grid .psc:nth-child(3){grid-column:auto}.psc{min-height:162px}.uc-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:640px){.ps-grid{grid-template-columns:minmax(0,1fr)}.ps-grid .psc:nth-child(3){grid-column:auto}.psc{min-height:156px}.uc-grid{grid-template-columns:minmax(0,1fr)}}
 .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:8px;background:var(--tile);padding:10px 14px;font-size:12px;color:var(--ink)}.chip-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
 .band{margin-top:24px;border:1px solid var(--line);border-radius:10px;background:#efeae0;padding:13px 18px;font-size:12px;color:#5b5344;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.band b{color:var(--ink)}
 
@@ -418,7 +418,7 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 <div class="ps">
 <h3 class="ps-h">Product surfaces for the full SDLC. One foundation.</h3>
 <div class="ps-grid">
-<button type="button" class="psc sc-green" aria-pressed="false" aria-label="Devin Desktop: flip for detail">
+<button type="button" class="psc" aria-pressed="false" aria-label="Devin Desktop: flip for detail">
 <div class="psc-inner">
 <div class="psc-face psc-front" aria-hidden="false">
 <div class="sc-lab"><span class="sc-dash"></span>Local</div>
@@ -431,7 +431,7 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 </div>
 </div>
 </button>
-<button type="button" class="psc sc-green" aria-pressed="false" aria-label="Devin CLI: flip for detail">
+<button type="button" class="psc" aria-pressed="false" aria-label="Devin CLI: flip for detail">
 <div class="psc-inner">
 <div class="psc-face psc-front" aria-hidden="false">
 <div class="sc-lab"><span class="sc-dash"></span>Local</div>
@@ -444,7 +444,7 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 </div>
 </div>
 </button>
-<button type="button" class="psc sc-blue psc-wide" aria-pressed="false" aria-label="Devin Cloud: flip for detail">
+<button type="button" class="psc psc-wide" aria-pressed="false" aria-label="Devin Cloud: flip for detail">
 <div class="psc-inner">
 <div class="psc-face psc-front" aria-hidden="false">
 <div class="sc-lab"><span class="sc-dash"></span>Cloud — the AI software engineer</div>
@@ -458,7 +458,7 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 </div>
 </div>
 </button>
-<button type="button" class="psc sc-blue" aria-pressed="false" aria-label="Automations: flip for detail">
+<button type="button" class="psc" aria-pressed="false" aria-label="Automations: flip for detail">
 <div class="psc-inner">
 <div class="psc-face psc-front" aria-hidden="false">
 <div class="sc-lab"><span class="sc-dash"></span>Built on Devin Cloud</div>
@@ -471,7 +471,7 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 </div>
 </div>
 </button>
-<button type="button" class="psc sc-blue" aria-pressed="false" aria-label="Security Swarm: flip for detail">
+<button type="button" class="psc" aria-pressed="false" aria-label="Security Swarm: flip for detail">
 <div class="psc-inner">
 <div class="psc-face psc-front" aria-hidden="false">
 <div class="sc-lab"><span class="sc-dash"></span>Built on Devin Cloud</div>
@@ -484,7 +484,7 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 </div>
 </div>
 </button>
-<button type="button" class="psc sc-red" aria-pressed="false" aria-label="Devin Review: flip for detail">
+<button type="button" class="psc" aria-pressed="false" aria-label="Devin Review: flip for detail">
 <div class="psc-inner">
 <div class="psc-face psc-front" aria-hidden="false">
 <div class="sc-lab"><span class="sc-dash"></span>Quality control</div>
@@ -497,7 +497,7 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 </div>
 </div>
 </button>
-<button type="button" class="psc sc-red" aria-pressed="false" aria-label="Devin Oncall: flip for detail">
+<button type="button" class="psc" aria-pressed="false" aria-label="Devin Oncall: flip for detail">
 <div class="psc-inner">
 <div class="psc-face psc-front" aria-hidden="false">
 <div class="sc-lab"><span class="sc-dash"></span>Incident response</div>
