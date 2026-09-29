@@ -203,12 +203,17 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{@page{size:A4;margin:14mm}body{background:white}.sidebar,.bottom-nav,.menu-toggle,dialog,.skip{display:none!important}.workspace{margin:0}.page{padding:0;max-width:none}.panel,.panel[hidden]{display:block!important;animation:none;break-before:page}.acc-panel{grid-template-rows:1fr;visibility:visible}.ide-pop{display:none!important}.panel:first-child{break-before:auto}h2{font-size:24px}.metrics{grid-template-columns:repeat(5,1fr)}.metric{padding:10px}.metric .value{font-size:18px}.card,.chip{box-shadow:none;break-inside:avoid}.footnote{display:block;font-size:8.5px}body[data-theme="dark"]{background:white}body[data-theme="dark"] h2,body[data-theme="dark"] .ch-sub{color:var(--ink)}body[data-theme="dark"] .eyebrow{color:var(--accent)}body[data-theme="dark"] .nf-front{background:#fff;border-color:var(--line);box-shadow:none}body[data-theme="dark"] .nf-front .sc-lab,body[data-theme="dark"] .ns-own{color:var(--muted)}body[data-theme="dark"] .ns-body{color:var(--ink)}body[data-theme="dark"] .nf-ic{background:rgba(11,16,32,.08);color:var(--muted)}}
 /* chapter 05 "Next Steps" — dark stat-card family (styled like .s-cards, on navy) */
-.cog-row{display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:32px;margin:18px 0;align-items:center}
+.cog-row{display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:32px;margin:18px 0;align-items:stretch}
+.cog-row-l{min-width:0}
+.cog-prods{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:12px;height:100%}
+.cprod{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);display:flex;align-items:center;min-width:0;padding:14px 17px;font-family:Georgia,'Times New Roman',serif;font-size:17px;font-weight:600;letter-spacing:-.3px;line-height:1.3;color:var(--ink);text-wrap:balance}
+.cprod::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;border-radius:14px 14px 0 0;background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 30%,#fff))}
 .cog-chart{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px 8px}
 .cog-chart svg{display:block;width:100%;height:auto}
 .cog-legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:10.5px;color:var(--muted);margin-top:2px}
 .cog-legend i{width:8px;height:8px;border-radius:2px;display:inline-block;margin-right:5px}
-@media(max-width:980px){.cog-row{grid-template-columns:1fr}.cog-row-l:empty{display:none}.cog-chart{max-width:520px}}
+@media(max-width:980px){.cog-row{grid-template-columns:1fr}.cog-prods{height:auto}.cog-chart{max-width:520px}}
+@media(max-width:480px){.cprod{font-size:15px;padding:12px 13px;letter-spacing:-.2px}}
 .ns-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px;align-items:stretch}
 .nsc{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;min-width:0;border-radius:14px;position:relative;height:410px}
 @media(max-width:1400px){.nsc{height:475px}}
@@ -554,7 +559,14 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 <button type="button" class="sl-next" id="qNext" aria-label="Next quote"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M4 1.5 L9 6 L4 10.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 </figure>
 <div class="cog-row">
-<div class="cog-row-l" aria-hidden="true"></div>
+<div class="cog-row-l"><div class="cog-prods" role="group" aria-label="Cognition products">
+<div class="cprod">Devin</div>
+<div class="cprod">Devin Desktop</div>
+<div class="cprod">Devin CLI</div>
+<div class="cprod">Devin Review</div>
+<div class="cprod">DeepWiki + Ask Devin</div>
+<div class="cprod">DANA · Security Swarm · Gov</div>
+</div></div>
 <figure class="cog-chart" role="img" aria-label="Stacked bar chart of effective engineering capacity: baseline team 100; AI copilots 130; Devin with 30, 50, 100, 400 and 900 autonomous engineers reaches 130, 150, 200, 500 and 1,000">
 <svg viewBox="0 0 460 264" aria-hidden="true">
 <g stroke="#e7e2d6" stroke-width="1"><line x1="44" y1="178" x2="456" y2="178"/><line x1="44" y1="138" x2="456" y2="138"/><line x1="44" y1="98" x2="456" y2="98"/><line x1="44" y1="58" x2="456" y2="58"/><line x1="44" y1="18" x2="456" y2="18"/></g>
