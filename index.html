@@ -885,8 +885,9 @@ const placeFig=()=>{
   if(!pop.classList.contains('show'))return;   // keep the last placement
   const m=panel.getBoundingClientRect(),pr=pop.getBoundingClientRect(),
         cr=charts.getBoundingClientRect(),
+        loc=section.querySelector('.ide-loc').getBoundingClientRect(),
         nav=document.getElementById('bottomNav').getBoundingClientRect();
-  const band0=pr.top,band1=Math.min(pr.bottom,nav.top-8);
+  const band0=loc.bottom+6,band1=Math.min(pr.bottom,nav.top-8);
   // card height = (w-22)*0.703+22 for this image; keep it inside the band
   const gap=pr.left-cr.right;
   const w=Math.min(gap-24,380,(band1-band0-8)/0.75);
@@ -899,7 +900,7 @@ const placeFig=()=>{
   fig.style.left=(cr.right-m.left+(gap-w)/2)+'px';
   fig.style.visibility='visible';
   const fh=fig.offsetHeight;
-  fig.style.top=(Math.min(band0-4,band1-fh)-m.top)+'px';
+  fig.style.top=(Math.min(band0,band1-fh)-m.top)+'px';
 };
 section.querySelectorAll('.mp-fig img').forEach(i=>{if(!i.complete)i.addEventListener('load',placeFig);});
 pop.addEventListener('transitionend',placeFig);
