@@ -248,7 +248,7 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{@page{size:A4;margin:14mm}body{background:white}.sidebar,.bottom-nav,.menu-toggle,dialog,.skip{display:none!important}.workspace{margin:0}.page{padding:0;max-width:none}.panel,.panel[hidden]{display:block!important;animation:none;break-before:page}.ide-pop{display:none!important}.panel:first-child{break-before:auto}h2{font-size:24px}.card,.chip{box-shadow:none;break-inside:avoid}.footnote{display:block;font-size:8.5px}body[data-theme="dark"]{background:white}body[data-theme="dark"] h2,body[data-theme="dark"] .ch-sub{color:var(--ink)}body[data-theme="dark"] .eyebrow{color:var(--accent)}body[data-theme="dark"] .nf-front{background:#fff;border-color:var(--line);box-shadow:none}body[data-theme="dark"] .nf-front .sc-lab,body[data-theme="dark"] .ns-own{color:var(--muted)}body[data-theme="dark"] .ns-body{color:var(--ink)}body[data-theme="dark"] .ns-target,body[data-theme="dark"] .ns-next{color:var(--ink)}body[data-theme="dark"] .nf-ic{background:rgba(11,16,32,.08);color:var(--muted)}}
 /* chapter 05 "Next Steps" — dark stat-card family (styled like .s-cards, on navy) */
-.ns-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px;align-items:stretch}
+.ns-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:6px;align-items:stretch}
 .nsc{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;min-width:0;border-radius:14px;position:relative}
 .nsc:focus-visible{outline:2px solid var(--accent-dim);outline-offset:3px}
 .nf-inner{position:relative;width:100%;height:100%;display:grid;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
@@ -1034,8 +1034,6 @@ window.addEventListener('resize',()=>{if(pop.classList.contains('show')){placePo
 </section>
 <section class="panel" id="platform" role="tabpanel" aria-labelledby="tab-platform">
 <div class="eyebrow">07 · Next Steps</div>
-<h2 class="h2-one">Three doors into the same program</h2>
-<p class="ch-sub">Ninety days, three owners, one agent team carrying the volume in all three.</p>
 <div class="ns-cards">
 <button type="button" class="nsc nflip" style="--sc:#1f9d55" aria-pressed="false" aria-label="Application modernization: flip for source">
 <div class="nf-inner">
