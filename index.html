@@ -1026,9 +1026,9 @@ window.addEventListener('resize',()=>{if(pop.classList.contains('show')){placePo
 <div class="nf-face nf-front">
 <div class="sc-lab"><span class="sc-num">01</span><span class="sc-dash"></span>Application modernization</div>
 <div class="ns-own"><b>Owner:</b> Kishore Jonnalagedda</div>
-<div class="ns-blk"><div class="ns-k ns-kt">Target</div><p class="ns-t">the 1,300 apps still off Chofer, starting with the ones nobody has documented.</p></div>
-<div class="ns-blk"><div class="ns-k ns-kn">Next step</div><p class="ns-t">point Devin at a first wave of 50 apps to generate the missing documentation and a Blueprint v2 migration PR for each, reviewed by Kishore's team, then package the working recipe as a playbook that runs across the rest of the estate.</p></div>
-<div class="ns-tl"><div class="ns-k">Timeline</div><p class="ns-t">30-day pilot on the first 50; playbook running fleet-wide by day 90, with low-risk changes auto-merging.</p></div>
+<div class="ns-blk"><div class="ns-k ns-kt">Target</div><p class="ns-t">the 1,300 apps still off Chofer, starting with the undocumented ones.</p></div>
+<div class="ns-blk"><div class="ns-k ns-kn">Next step</div><p class="ns-t">Devin documents and Blueprint-v2-migrates a first wave of 50 apps, reviewed by Kishore's team; the proven recipe becomes a playbook for the rest of the estate.</p></div>
+<div class="ns-tl"><div class="ns-k">Timeline</div><p class="ns-t">30-day pilot; playbook fleet-wide by day 90, with low-risk changes auto-merging.</p></div>
 <span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
 <div class="nf-face nf-back" aria-hidden="true">
@@ -1048,9 +1048,9 @@ window.addEventListener('resize',()=>{if(pop.classList.contains('show')){placePo
 <div class="nf-face nf-front">
 <div class="sc-lab"><span class="sc-num">02</span><span class="sc-dash"></span>Monolith-to-microservices</div>
 <div class="ns-own"><b>Owner:</b> Brian Kursar</div>
-<div class="ns-blk"><div class="ns-k ns-kt">Target</div><p class="ns-t">100,000+ scheduled ETL scripts and the 12,000-line Terraform Blueprints copied three times over.</p></div>
-<div class="ns-blk"><div class="ns-k ns-kn">Next step</div><p class="ns-t">take one business unit's ETL estate, have Devin map dependencies and migrate the first 100 scripts into the target module structure while collapsing the three Terraform copies into one shared module, so the per-script pattern is proven before it scales.</p></div>
-<div class="ns-tl"><div class="ns-k">Timeline</div><p class="ns-t">6-week pilot; first business unit complete inside a quarter; full estate sized from pilot throughput, with 12 months as the working target.</p></div>
+<div class="ns-blk"><div class="ns-k ns-kt">Target</div><p class="ns-t">100,000+ scheduled ETL scripts and the 12,000-line Terraform Blueprints duplicated three times.</p></div>
+<div class="ns-blk"><div class="ns-k ns-kn">Next step</div><p class="ns-t">prove it on one business unit: Devin maps dependencies, migrates the first 100 scripts into the target module structure, and collapses the three Terraform copies into one shared module.</p></div>
+<div class="ns-tl"><div class="ns-k">Timeline</div><p class="ns-t">6-week pilot; first business unit done inside a quarter; full estate sized from pilot throughput at ~12 months.</p></div>
 <span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
 <div class="nf-face nf-back" aria-hidden="true">
@@ -1070,9 +1070,9 @@ window.addEventListener('resize',()=>{if(pop.classList.contains('show')){placePo
 <div class="nf-face nf-front">
 <div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Legacy code refactor &amp; migration</div>
 <div class="ns-own"><b>Owner:</b> Scott Holdt</div>
-<div class="ns-blk"><div class="ns-k ns-kt">Target</div><p class="ns-t">the 40M-line COBOL→Java output scored 3.44/5 with no tests, and the 1979 mainframe still carrying 90% of supply chain.</p></div>
-<div class="ns-blk"><div class="ns-k ns-kn">Next step</div><p class="ns-t">don't re-translate; take one supply-chain module and have Devin generate characterization tests from the COBOL behavior, run them against the Java, and fix what fails, lifting quality and coverage in the same pass.</p></div>
-<div class="ns-tl"><div class="ns-k">Timeline</div><p class="ns-t">4-week pilot on one module; pilot results set the phased plan, with 18–24 months as the working gauge for the program.</p></div>
+<div class="ns-blk"><div class="ns-k ns-kt">Target</div><p class="ns-t">the 40M-line COBOL→Java output (3.44/5, no tests) and the 1979 mainframe still carrying 90% of supply chain.</p></div>
+<div class="ns-blk"><div class="ns-k ns-kn">Next step</div><p class="ns-t">don't re-translate; Devin generates characterization tests for one supply-chain module from the COBOL behavior, runs them against the Java, and fixes what fails.</p></div>
+<div class="ns-tl"><div class="ns-k">Timeline</div><p class="ns-t">4-week pilot on one module; results set the phased plan, 18–24 months for the program.</p></div>
 <span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
 <div class="nf-face nf-back" aria-hidden="true">
