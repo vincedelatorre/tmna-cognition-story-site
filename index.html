@@ -246,7 +246,7 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 @media(max-width:980px){.grid.three,.grid.two{grid-template-columns:1fr}}
 @media(max-width:720px){.sidebar{transform:translateX(-100%);width:256px;transition:transform .2s}.sidebar.open{transform:translateX(0);box-shadow:0 0 0 100vmax #0b102066}.workspace{margin-left:0}.menu-toggle{display:flex;position:fixed;top:10px;left:10px;z-index:40;padding:7px 10px;font-size:14px;background:var(--paper);box-shadow:0 1px 6px #0b102022}.page{padding:56px 16px 22px}h2{font-size:29px;letter-spacing:-.8px}.sub{font-size:16px}.card{padding:20px}.ide-pop{width:min(290px,calc(100vw - 32px))}.cmp-dl{display:none}.cmp-left{flex-wrap:wrap;row-gap:6px}.footnote{display:block;font-size:9px;padding:15px 16px 22px}.footnote span{display:block;margin-bottom:5px}.bottom-nav small{display:none}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
-@media print{@page{size:A4;margin:14mm}body{background:white}.sidebar,.bottom-nav,.menu-toggle,dialog,.skip{display:none!important}.workspace{margin:0}.page{padding:0;max-width:none}.panel,.panel[hidden]{display:block!important;animation:none;break-before:page}.ide-pop{display:none!important}.panel:first-child{break-before:auto}h2{font-size:24px}.card,.chip{box-shadow:none;break-inside:avoid}.footnote{display:block;font-size:8.5px}body[data-theme="dark"]{background:white}body[data-theme="dark"] h2,body[data-theme="dark"] .ch-sub{color:var(--ink)}body[data-theme="dark"] .eyebrow{color:var(--accent)}body[data-theme="dark"] .nf-front{background:#fff;border-color:var(--line);box-shadow:none}body[data-theme="dark"] .nf-front .sc-lab,body[data-theme="dark"] .ns-own{color:var(--muted)}body[data-theme="dark"] .ns-body{color:var(--ink)}body[data-theme="dark"] .nf-ic{background:rgba(11,16,32,.08);color:var(--muted)}}
+@media print{@page{size:A4;margin:14mm}body{background:white}.sidebar,.bottom-nav,.menu-toggle,dialog,.skip{display:none!important}.workspace{margin:0}.page{padding:0;max-width:none}.panel,.panel[hidden]{display:block!important;animation:none;break-before:page}.ide-pop{display:none!important}.panel:first-child{break-before:auto}h2{font-size:24px}.card,.chip{box-shadow:none;break-inside:avoid}.footnote{display:block;font-size:8.5px}body[data-theme="dark"]{background:white}body[data-theme="dark"] h2,body[data-theme="dark"] .ch-sub{color:var(--ink)}body[data-theme="dark"] .eyebrow{color:var(--accent)}body[data-theme="dark"] .nf-front{background:#fff;border-color:var(--line);box-shadow:none}body[data-theme="dark"] .nf-front .sc-lab,body[data-theme="dark"] .ns-own{color:var(--muted)}body[data-theme="dark"] .ns-body{color:var(--ink)}body[data-theme="dark"] .ns-target,body[data-theme="dark"] .ns-next{color:var(--ink)}body[data-theme="dark"] .nf-ic{background:rgba(11,16,32,.08);color:var(--muted)}}
 /* chapter 05 "Next Steps" — dark stat-card family (styled like .s-cards, on navy) */
 .ns-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px;align-items:stretch}
 .nsc{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;color:inherit;text-align:left;display:block;cursor:pointer;perspective:1400px;min-width:0;border-radius:14px;position:relative}
@@ -265,6 +265,9 @@ h2.eyebrow{font-family:inherit;max-width:none;line-height:1.6}
 .ns-own{margin-top:14px;font-size:12.5px;font-weight:600;line-height:1.45;color:rgba(255,255,255,.72)}
 .ns-own b{color:var(--sc);font-weight:600}
 .ns-body{font-size:14px;line-height:1.6;color:rgba(255,255,255,.85);margin:12px 0 0;text-wrap:pretty}
+.ns-target{color:#c4b5fd}
+.ns-next{color:#fcd34d;margin-top:8px}
+.ns-body b{font-weight:600}
 .ns-tl{margin-top:auto;padding-top:18px;min-height:126px}
 .ns-k{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;color:var(--sc)}
 .nf-front .ns-t{font-size:14px;line-height:1.5;color:rgba(255,255,255,.85);margin:6px 0 0}
@@ -1039,7 +1042,8 @@ window.addEventListener('resize',()=>{if(pop.classList.contains('show')){placePo
 <div class="nf-face nf-front">
 <div class="sc-lab"><span class="sc-num">01</span><span class="sc-dash"></span>Application modernization</div>
 <div class="ns-own"><b>Owner:</b> Kishore Jonnalagedda</div>
-<p class="ns-body">Target: the 1,300 apps still off Chofer, starting with the ones nobody has documented. Next step: point Devin at a first wave of 50 apps to generate the missing documentation and a Blueprint v2 migration PR for each, reviewed by Kishore's team, then package the working recipe as a playbook that runs across the rest of the estate.</p>
+<p class="ns-body ns-target"><b>Target:</b> the 1,300 apps still off Chofer, starting with the ones nobody has documented.</p>
+<p class="ns-body ns-next"><b>Next step:</b> point Devin at a first wave of 50 apps to generate the missing documentation and a Blueprint v2 migration PR for each, reviewed by Kishore's team, then package the working recipe as a playbook that runs across the rest of the estate.</p>
 <div class="ns-tl"><div class="ns-k">Timeline</div><p class="ns-t">30-day pilot on the first 50; playbook running fleet-wide by day 90, with low-risk changes auto-merging.</p></div>
 <span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
@@ -1057,7 +1061,8 @@ window.addEventListener('resize',()=>{if(pop.classList.contains('show')){placePo
 <div class="nf-face nf-front">
 <div class="sc-lab"><span class="sc-num">02</span><span class="sc-dash"></span>Monolith-to-microservices decomposition</div>
 <div class="ns-own"><b>Owner:</b> Brian Kursar</div>
-<p class="ns-body">Target: 100,000+ scheduled ETL scripts and the 12,000-line Terraform Blueprints copied three times over. Next step: take one business unit's ETL estate, have Devin map dependencies and migrate the first 100 scripts into the target module structure while collapsing the three Terraform copies into one shared module, so the per-script pattern is proven before it scales.</p>
+<p class="ns-body ns-target"><b>Target:</b> 100,000+ scheduled ETL scripts and the 12,000-line Terraform Blueprints copied three times over.</p>
+<p class="ns-body ns-next"><b>Next step:</b> take one business unit's ETL estate, have Devin map dependencies and migrate the first 100 scripts into the target module structure while collapsing the three Terraform copies into one shared module, so the per-script pattern is proven before it scales.</p>
 <div class="ns-tl"><div class="ns-k">Timeline</div><p class="ns-t">6-week pilot; first business unit complete inside a quarter; full estate sized from pilot throughput, with 12 months as the working target.</p></div>
 <span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
@@ -1075,7 +1080,8 @@ window.addEventListener('resize',()=>{if(pop.classList.contains('show')){placePo
 <div class="nf-face nf-front">
 <div class="sc-lab"><span class="sc-num">03</span><span class="sc-dash"></span>Legacy code refactor &amp; migration</div>
 <div class="ns-own"><b>Owner:</b> Scott Holdt</div>
-<p class="ns-body">Target: the 40M-line COBOL→Java output scored 3.44/5 with no tests, and the 1979 mainframe still carrying 90% of supply chain. Next step: don't re-translate; take one supply-chain module and have Devin generate characterization tests from the COBOL behavior, run them against the Java, and fix what fails, lifting quality and coverage in the same pass.</p>
+<p class="ns-body ns-target"><b>Target:</b> the 40M-line COBOL→Java output scored 3.44/5 with no tests, and the 1979 mainframe still carrying 90% of supply chain.</p>
+<p class="ns-body ns-next"><b>Next step:</b> don't re-translate; take one supply-chain module and have Devin generate characterization tests from the COBOL behavior, run them against the Java, and fix what fails, lifting quality and coverage in the same pass.</p>
 <div class="ns-tl"><div class="ns-k">Timeline</div><p class="ns-t">4-week pilot on one module; pilot results set the phased plan, with 18–24 months as the working gauge for the program.</p></div>
 <span class="nf-ic" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 6.7A5.5 5.5 0 1 0 14 8"/><path d="M13.8 3v3.6h-3.6"/></svg></span>
 </div>
