@@ -82,18 +82,7 @@ body[data-accent="red"]{--accent:#eb0a1e;--accent-dim:#ff6b76}
 .evo-hl .evo-div{border-color:rgba(255,255,255,.15)}
 @media(max-width:1180px){.evo{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.evo{grid-template-columns:1fr}}
-.loop{margin-top:18px}
-.loop-card{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:16px;margin-top:10px}
-.loop-card svg{width:100%;height:auto}
-.loop-fb{display:none}
-@media(max-width:720px){
-.loop-card svg{display:none}
-.loop-fb{display:block}
-.lf-box{border:1px solid var(--line);border-radius:6px;padding:10px 14px;font-size:14px;font-weight:600;text-align:center}
-.lf-arr{text-align:center;color:var(--muted);font-size:14px;line-height:1.4}
-.lf-group{border:1.5px solid var(--accent);border-radius:10px;padding:8px}
-.lf-back{margin-top:10px;font-size:12px;color:var(--muted);text-align:center}
-}
+
 .ps-row{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:8px;align-items:stretch;margin-top:18px}
 @media(min-width:1181px){
 .ps-row .uc{margin-top:0;display:flex;flex-direction:column}
@@ -680,50 +669,6 @@ body[data-theme="dark"] .footnote{color:rgba(255,255,255,.5);border-top-color:rg
 <div class="uc-card">Codebase understanding</div>
 <div class="uc-card">Incident triage</div>
 <div class="uc-card">Vulnerability remediation</div>
-</div>
-</div>
-</div>
-<div class="loop">
-<h3 class="ps-h">Agents can now close the loop</h3>
-<div class="loop-card">
-<svg viewBox="0 0 1072 236" role="img" aria-label="Five-step loop: Understanding codebase, Planning out a change, Writing the code, Review, Testing and QA, with a return arrow back to Understanding codebase">
-<g font-size="15" font-weight="500" text-anchor="middle">
-<rect x="49" y="8" width="200" height="36" rx="6" fill="#f1efe9" stroke="#d9d5cc"/>
-<text x="149" y="31" fill="#0b1020">Understanding codebase</text>
-<path d="M249 26 H339 V48" fill="none" stroke="#9aa0ab" stroke-width="1.5" stroke-dasharray="2 4"/>
-<path d="M335 41 L343 41 L339 49 Z" fill="#9aa0ab"/>
-<rect x="239" y="48" width="200" height="36" rx="6" fill="#e3ded3" stroke="#d9d5cc"/>
-<text x="339" y="71" fill="#0b1020">Planning out a change</text>
-<path d="M439 66 H529 V88" fill="none" stroke="#9aa0ab" stroke-width="1.5" stroke-dasharray="2 4"/>
-<path d="M525 81 L533 81 L529 89 Z" fill="#9aa0ab"/>
-<rect x="429" y="88" width="200" height="36" rx="6" fill="#c9c3b6" stroke="#d9d5cc"/>
-<text x="529" y="111" fill="#0b1020">Writing the code</text>
-<path d="M629 106 H719 V128" fill="none" stroke="#9aa0ab" stroke-width="1.5" stroke-dasharray="2 4"/>
-<path d="M715 121 L723 121 L719 129 Z" fill="#9aa0ab"/>
-<rect x="619" y="128" width="200" height="36" rx="6" fill="#5b6272"/>
-<text x="719" y="151" fill="#ffffff">Review</text>
-<path d="M819 146 H909 V168" fill="none" stroke="#9aa0ab" stroke-width="1.5" stroke-dasharray="2 4"/>
-<path d="M905 161 L913 161 L909 169 Z" fill="#9aa0ab"/>
-<rect x="809" y="168" width="200" height="36" rx="6" fill="#0b1020"/>
-<text x="909" y="191" fill="#ffffff">Testing and QA</text>
-<rect x="605" y="114" width="418" height="104" rx="10" fill="none" stroke="#2f4bff" stroke-width="1.5"/>
-<path d="M809 186 H149 V46" fill="none" stroke="#9aa0ab" stroke-width="1.5" stroke-dasharray="2 4"/>
-<path d="M145 53 L153 53 L149 45 Z" fill="#9aa0ab"/>
-</g>
-</svg>
-<div class="loop-fb">
-<div class="lf-box" style="background:#f1efe9;color:#0b1020">Understanding codebase</div>
-<div class="lf-arr">↓</div>
-<div class="lf-box" style="background:#e3ded3;color:#0b1020">Planning out a change</div>
-<div class="lf-arr">↓</div>
-<div class="lf-box" style="background:#c9c3b6;color:#0b1020">Writing the code</div>
-<div class="lf-arr">↓</div>
-<div class="lf-group">
-<div class="lf-box" style="background:#5b6272;color:#fff">Review</div>
-<div class="lf-arr">↓</div>
-<div class="lf-box" style="background:#0b1020;color:#fff">Testing and QA</div>
-</div>
-<div class="lf-back">↺ back to Understanding codebase</div>
 </div>
 </div>
 </div>
